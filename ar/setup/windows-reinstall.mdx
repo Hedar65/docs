@@ -3,7 +3,7 @@ title: "كيف تعيد تثبيت Windows قبل استخدام Mosab Spoofer"
 description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosab Spoofer. يغطي طرق التثبيت العادي و RAID مع شرح diskpart عبر USB."
 ---
 
-قبل استخدام Mosab Spoofer، يجب عليك إجراء إعادة تثبيت نظيفة لـ Windows. هذا يضمن إعادة تعيين جميع معرّفات الهاردوير بشكل صحيح وعدم بقاء أي آثار حظر على نظامك. هناك طريقتان لإعادة التثبيت — العادية و RAID — والاختيار الصحيح يعتمد على لعبتك وتاريخ الحظر.
+قبل استخدام Mosab Spoofer، يجب عليك إجراء إعادة تثبيت نظيفة لـ **Windows 11 23H2**. هذا يضمن إعادة تعيين جميع معرّفات الهاردوير بشكل صحيح وعدم بقاء أي آثار حظر على نظامك. هناك طريقتان لإعادة التثبيت — العادية و RAID — والاختيار الصحيح يعتمد على لعبتك وتاريخ الحظر.
 
 ## أي طريقة إعادة تثبيت يجب أن تستخدم؟
 
@@ -30,20 +30,38 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
 </Note>
 
 <Steps>
-  <Step title="تنزيل Media Creation Tool لـ Windows 10">
-    اذهب إلى [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10) واضغط **Download Now** للحصول على Media Creation Tool.
+  <Step title="تنزيل ملف ISO لـ Windows 11 23H2">
+    اذهب إلى [microsoft.com](https://www.microsoft.com/software-download/windows11) وانزل إلى قسم **Download Windows 11 Disk Image (ISO) for x64 devices**.
 
-    ![تنزيل Media Creation Tool](/images/windows-reinstall/01-media-creation-tool.png)
+    اختر **Windows 11 (multi-edition ISO for x64 devices)**، حدد اللغة، ونزّل ملف ISO الخاص بـ **23H2**.
+
+    <Note>
+      تأكد من تنزيل إصدار **23H2** تحديداً. لا تنزّل 24H2 أو إصدارات أقدم.
+    </Note>
+
+    ![تنزيل Windows 11 23H2 ISO](/images/windows-reinstall/01-media-creation-tool.png)
   </Step>
-  <Step title="تشغيل كمسؤول">
-    اضغط بزر الفأرة الأيمن على الأداة المنزّلة واختر **Run as administrator**.
+  <Step title="تنزيل Rufus لإنشاء USB">
+    نزّل Rufus من [rufus.ie](https://rufus.ie/) — سيكتب ملف ISO على فلاش USB.
+
+    ![تنزيل Rufus](/images/windows-reinstall/01b-rufus-download.png)
+  </Step>
+  <Step title="تشغيل Rufus كمسؤول">
+    اضغط بزر الفأرة الأيمن على Rufus واختر **Run as administrator**.
 
     ![تشغيل كمسؤول](/images/windows-reinstall/02-run-as-admin.png)
   </Step>
-  <Step title="إنشاء وسائط تثبيت">
-    عند المطالبة، اختر **Create installation media (USB flash drive, DVD, or ISO file)**، ثم اختر **USB Flash Drive** كنوع وسائط.
+  <Step title="كتابة ISO 23H2 على USB">
+    في Rufus:
 
-    استخدم جميع الخيارات الافتراضية الموصى بها وانتظر اكتمال العملية.
+    1. اختر فلاش USB من **Device**.
+    2. اضغط **SELECT** واختر ملف ISO الخاص بـ Windows 11 23H2.
+    3. اترك **Partition scheme** على **GPT** و **Target system** على **UEFI**.
+    4. اضغط **START**.
+
+    عندما تظهر نافذة تخصيص Windows 11، يمكنك اختياراً تفعيل **Remove requirement for an online Microsoft account** و **Disable data collection**.
+
+    انتظر حتى يظهر Rufus **READY** باللون الأخضر.
 
     ![إنشاء وسائط تثبيت](/images/windows-reinstall/03-create-installation-media.png)
   </Step>
@@ -54,13 +72,13 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
 
     ![الإقلاع من USB](/images/windows-reinstall/04-boot-from-usb.png)
   </Step>
-  <Step title="اختيار Windows 10 Pro">
-    عندما يسألك معالج إعداد Windows عن أي نسخة تثبت، اختر **Windows 10 Pro**.
+  <Step title="اختيار Windows 11 Pro">
+    عندما يسألك معالج إعداد Windows عن أي نسخة تثبت، اختر **Windows 11 Pro**.
 
-    ![اختيار Windows 10 Pro](/images/windows-reinstall/05-select-win10-pro.png)
+    ![اختيار Windows 11 Pro](/images/windows-reinstall/05-select-win10-pro.png)
 
     <Warning>
-      يجب اختيار **Windows 10 Pro** تحديداً. لا تختر Home أو أي نسخة أخرى.
+      يجب اختيار **Windows 11 Pro** تحديداً. لا تختر Home أو أي نسخة أخرى.
     </Warning>
   </Step>
   <Step title="تخطي مفتاح المنتج">

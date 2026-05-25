@@ -1,9 +1,9 @@
 ---
-title: "How to Reinstall Windows Before Using Redline Spoofer"
-description: "A clean Windows installation is required before running Redline Spoofer. Covers Normal and RAID reinstall methods with USB diskpart walkthrough."
+title: "How to Reinstall Windows Before Using Mosab Spoofer"
+description: "A clean Windows installation is required before running Mosab Spoofer. Covers Normal and RAID reinstall methods with USB diskpart walkthrough."
 ---
 
-Before using Redline Spoofer, you must perform a clean reinstallation of Windows. This ensures all hardware identifiers are properly reset and that no leftover ban traces remain on your system. There are two reinstallation methods — Normal and RAID — and the right choice depends on your game and ban history.
+Before using Mosab Spoofer, you must perform a clean reinstallation of **Windows 11 23H2**. This ensures all hardware identifiers are properly reset and that no leftover ban traces remain on your system. There are two reinstallation methods — Normal and RAID — and the right choice depends on your game and ban history.
 
 ## Which reinstall method should you use?
 
@@ -30,22 +30,40 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 </Note>
 
 <Steps>
-  <Step title="Download the Windows 10 Media Creation Tool">
-    Go to [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10) and click **Download Now** to get the Media Creation Tool.
+  <Step title="Download the Windows 11 23H2 ISO">
+    Go to [microsoft.com](https://www.microsoft.com/software-download/windows11) and scroll to **Download Windows 11 Disk Image (ISO) for x64 devices**.
 
-    ![Download Media Creation Tool](/images/windows-reinstall/01-media-creation-tool.png)
+    Select **Windows 11 (multi-edition ISO for x64 devices)**, choose your language, and download the **23H2** ISO file.
+
+    <Note>
+      Make sure you download the **23H2** build specifically. Do not download 24H2 or older versions.
+    </Note>
+
+    ![Download Windows 11 23H2 ISO](/images/windows-reinstall/01-media-creation-tool.png)
   </Step>
-  <Step title="Run as administrator">
-    Right-click the downloaded tool and select **Run as administrator**.
+  <Step title="Download Rufus to create the USB">
+    Download Rufus from [rufus.ie](https://rufus.ie/) — it will write the ISO to your USB drive.
 
-    ![Run as administrator](/images/windows-reinstall/02-run-as-admin.png)
+    ![Download Rufus](/images/windows-reinstall/01b-rufus-download.png)
   </Step>
-  <Step title="Create installation media">
-    When prompted, select **Create installation media (USB flash drive, DVD, or ISO file)**, then choose **USB Flash Drive** as the media type.
+  <Step title="Run Rufus as administrator">
+    Right-click Rufus and select **Run as administrator**.
 
-    Use all recommended default options and wait for the process to complete. Your USB drive should end up with a Windows setup structure on it.
+    ![Run Rufus as administrator](/images/windows-reinstall/02-run-as-admin.png)
+  </Step>
+  <Step title="Write the 23H2 ISO to your USB">
+    In Rufus:
 
-    ![Create installation media](/images/windows-reinstall/03-create-installation-media.png)
+    1. Select your USB drive under **Device**.
+    2. Click **SELECT** and choose the Windows 11 23H2 ISO you downloaded.
+    3. Leave **Partition scheme** as **GPT** and **Target system** as **UEFI**.
+    4. Click **START**.
+
+    When the Windows 11 customization dialog appears, you can optionally check **Remove requirement for an online Microsoft account** and **Disable data collection**.
+
+    Wait until Rufus shows **READY** in green.
+
+    ![Create installation media with Rufus](/images/windows-reinstall/03-create-installation-media.png)
   </Step>
   <Step title="Boot from the USB">
     Hold **SHIFT**, then click **Restart** (keep holding SHIFT until the recovery screen appears).
@@ -54,13 +72,13 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 
     ![Boot from USB](/images/windows-reinstall/04-boot-from-usb.png)
   </Step>
-  <Step title="Select Windows 10 Pro">
-    When the Windows Setup wizard asks which version to install, select **Windows 10 Pro**.
+  <Step title="Select Windows 11 Pro">
+    When the Windows Setup wizard asks which version to install, select **Windows 11 Pro**.
 
-    ![Select Windows 10 Pro](/images/windows-reinstall/05-select-win10-pro.png)
+    ![Select Windows 11 Pro](/images/windows-reinstall/05-select-win10-pro.png)
 
     <Warning>
-      You must select **Windows 10 Pro** specifically. Do not choose Home or any other edition.
+      You must select **Windows 11 Pro** specifically. Do not choose Home or any other edition.
     </Warning>
   </Step>
   <Step title="Skip the product key">

@@ -19,19 +19,36 @@ Leaving extra network adapters enabled can expose additional hardware identifier
 
     Note the name of your active network connection before proceeding.
 
-    ![ncpa.cpl active connection](/images/network-setup/01-ncpa-active.png)
+    ![Net 1](/images/net-1.avif)
   </Step>
   <Step title="Open Device Manager">
     Right-click the **Windows logo** in the taskbar and select **Device Manager**.
 
-    ![Open Device Manager](/images/network-setup/02-device-manager.png)
+    <Frame>
+      <img
+        src="/images/net1.avif"
+        alt="Net1"
+        title="Net1"
+        lightAlt="Net1"
+        darkAlt="Net1"
+        className="mr-auto dark:hidden"
+      />
+      <img
+        src="/images/net.png"
+        alt="Net1"
+        title="Net1"
+        lightAlt="Net1"
+        darkAlt="Net1"
+        className="mr-auto hidden dark:block"
+      />
+    </Frame>
   </Step>
   <Step title="Disable All Inactive Network Adapters">
     In Device Manager, expand the **Network Adapters** section.
 
     Right-click each adapter and select **Disable device** — disable all of them **except** the one that matches your active connection name you noted in step 1.
 
-    ![Disable inactive adapters](/images/network-setup/03-disable-adapters.png)
+    ![Net1](/images/net1.avif)
 
     <Warning>
       Do not disable your active adapter. Disabling the wrong one will cut your internet connection.
@@ -47,7 +64,7 @@ Fine-tuning your adapter's advanced properties removes additional identifiers th
   <Step title="Open Network Connections Again">
     Press **Windows \+ R**, type `ncpa.cpl`, and click **OK**.
 
-    ![Open ncpa.cpl again](/images/network-setup/04-ncpa-again.png)
+    ![Net 1](/images/net-1.avif)
   </Step>
   <Step title="Open Adapter Properties">
     Right-click your active connection and select **Properties**.
@@ -59,14 +76,14 @@ Fine-tuning your adapter's advanced properties removes additional identifiers th
 
     Click **OK** to save.
 
-    ![Adapter properties checked items](/images/network-setup/05-adapter-properties.png)
+    ![Properties](/images/Properties.avif)
   </Step>
   <Step title="Open Advanced Adapter Settings">
     Right-click your active connection again, select **Properties**, then click **Configure**.
 
     Go to the **Advanced** tab.
 
-    ![Advanced tab](/images/network-setup/06-advanced-tab.png)
+    ![Net3](/images/net3.avif)
   </Step>
   <Step title="Apply the Required Advanced Settings">
     Find each of the following properties and set them to the values shown:
@@ -87,38 +104,18 @@ Fine-tuning your adapter's advanced properties removes additional identifiers th
     </Note>
 
     Click **OK** to save your changes.
-
-    ![Advanced settings applied](/images/network-setup/07-advanced-settings.png)
   </Step>
 </Steps>
 
-## Rotate Your IP Address
-
-After spoofing, your IP address may still be flagged. Rotating it ensures your network identity does not carry over from before the ban.
-
 <Steps>
-  <Step title="Check and Save Your Current IP">
-    Visit any IP-checking website, note your current IP address, and take a screenshot. You will compare this against your new IP after the rotation.
-
-    ![Check current IP](/images/network-setup/08-check-ip.png)
-  </Step>
-  <Step title="Disconnect for 6 Minutes">
-    Turn off your internet connection completely for **6 minutes**, then turn it back on.
-
-    Check your IP address again. It should be different from the one you saved.
-
-    ![Disconnect internet](/images/network-setup/09-disconnect.png)
-
-    <Warning>
-      If your IP address has not changed, contact your ISP or try the disconnect for a longer period. Do not continue until your IP has rotated.
-    </Warning>
-  </Step>
-  <Step title="Set Up Cloudflare WARP">
+  <Step title='Set Up Cloudflare WARP "Fortnite Only"'>
     Download and install [Cloudflare WARP](https://1.1.1.1/) (the 1.1.1.1 app).
 
     Enable WARP and use it **every time you launch the game** for the first **7 days** after your spoof.
 
-    ![Cloudflare WARP enabled](/images/network-setup/10-warp.png)
+    <Frame>
+      ![Cloud](/images/cloud.png)
+    </Frame>
 
     <Tip>
       Cloudflare WARP will not noticeably affect your ping. It is safe to use for gaming and is the recommended VPN for this process.
