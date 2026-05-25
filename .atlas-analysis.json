@@ -1,0 +1,70 @@
+{
+  "projectType": "saas",
+  "projectName": "Redline Spoofer",
+  "projectDescription": "Redline is a permanent HWID spoofer that allows players to bypass hardware bans in games like Valorant, Fortnite, Rust, and Apex Legends.",
+  "theme": "aspen",
+  "primaryColor": "#DC2626",
+  "lightColor": "#FCA5A5",
+  "darkColor": "#7F1D1D",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "Setup Guide",
+            "pages": [
+              "setup/windows-reinstall",
+              "setup/bios-update",
+              "setup/bios-settings",
+              "setup/windows-configuration"
+            ]
+          },
+          {
+            "group": "Using the Spoofer",
+            "pages": [
+              "spoofer/download",
+              "spoofer/spoof-steps",
+              "spoofer/network-setup",
+              "spoofer/monitor-serials"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-issues",
+              "troubleshooting/tpm-not-found",
+              "troubleshooting/spoofer-not-opening"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Permanent HWID spoofing to bypass hardware bans",
+    "Support for Valorant (RICOCHET), Fortnite, Rust, Apex Legends, and other EAC/BE games",
+    "MAC address spoofing",
+    "Driverless TPM spoofing",
+    "Monitor serial changing for EAC/BE games",
+    "License key-based loader system",
+    "Network adapter configuration for anti-cheat bypass",
+    "Discord support ticket system"
+  ],
+  "publicApiSurface": [
+    "Loader download at loader.cryptauth.net",
+    "License key login",
+    "MAC Spoof",
+    "Driverless TPM Spoof",
+    "PERM Spoof",
+    "SerialChecker tool",
+    "Network adapter configuration (EAC/BE/RICOCHET)",
+    "Monitor serial change via CRU"
+  ]
+}

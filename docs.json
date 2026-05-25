@@ -1,0 +1,55 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "Mosab Store",
+  "favicon": "https://icons.duckduckgo.com/ip3/redline-1.gitbook.io.ico",
+  "colors": {
+    "primary": "#DC2626",
+    "light": "#FCA5A5",
+    "dark": "#7F1D1D"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "Setup Guide",
+            "pages": [
+              "setup/windows-reinstall",
+              "setup/bios-update",
+              "setup/bios-settings",
+              "setup/windows-configuration"
+            ]
+          },
+          {
+            "group": "Using the Spoofer",
+            "pages": [
+              "spoofer/download",
+              "spoofer/spoof-steps",
+              "spoofer/network-setup",
+              "spoofer/monitor-serials"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-issues",
+              "troubleshooting/tpm-not-found",
+              "troubleshooting/spoofer-not-opening"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

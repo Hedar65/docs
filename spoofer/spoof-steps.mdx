@@ -1,0 +1,84 @@
+---
+title: "How to Complete the HWID Spoof Process with Redline"
+description: "Follow the full spoof process: check serials, clear TPM, then run MAC Spoof, Driverless TPM Spoof, and PERM Spoof with the Redline loader."
+---
+
+This page walks you through the complete HWID spoof process using the Redline loader. Follow each step in order — skipping or reordering steps can result in an incomplete spoof or a continued ban. Before you begin, make sure the loader is already downloaded and you are logged in.
+
+<Warning>
+  Do not proceed unless you have completed all setup guide steps and successfully logged into the loader. An incomplete setup will cause the spoof to fail.
+</Warning>
+
+<Steps>
+  <Step title="Check Your Current Serials">
+    Download [SerialChecker](https://drive.google.com/file/d/1dnUHaDajJaqNSno1SsDFDFDuOQhrMNtQ/view?usp=sharing) and run it.
+
+    Note your current hardware serials and take a screenshot. Save the screenshot — you will use it later to confirm that the spoof changed your serials successfully.
+  </Step>
+
+  <Step title="Clear TPM">
+    Open the TPM management console and clear your TPM chip.
+
+    1. Press **Windows + R**, type `tpm.msc`, and press **Enter**.
+    2. Click **Clear TPM**.
+    3. Click the **Restart** button and wait for your PC to restart fully.
+
+    <Warning>
+      Your PC will restart as part of this step. Save any open work before proceeding.
+    </Warning>
+  </Step>
+
+  <Step title="Download and Run the Loader as Administrator">
+    After your PC restarts, download the loader from [loader.cryptauth.net](https://loader.cryptauth.net/) using your license key.
+
+    Right-click the loader and select **Run as administrator**, then log in with your provided key.
+  </Step>
+
+  <Step title="Run the PERM Spoof Process">
+    Inside the loader, complete the following actions in order:
+
+    1. Log in with your license key.
+    2. Click **MAC Spoof** and run it.
+    3. Click **Driverless TPM Spoof** and run it.
+    4. Check your new TPM serials using SerialChecker.
+
+    <Warning>
+      If your TPM serials have **not** changed after running Driverless TPM Spoof, do not continue. Go back and follow the setup guide again, or open a support ticket.
+    </Warning>
+
+    5. Click **PERM Spoof** and run it.
+    6. Run SerialChecker again and verify that all serials have changed from your original screenshot.
+  </Step>
+
+  <Step title="Install Valorant">
+    Install Valorant fresh after the spoof is complete.
+
+    <Warning>
+      When Windows Firewall asks for permission during installation, click **Cancel** or the **X** button. Do **not** click Allow. Granting firewall access can expose your hardware identity before the spoof is fully registered.
+    </Warning>
+  </Step>
+
+  <Step title="Configure Riot Client Settings">
+    Before launching the game, open Riot Client and apply the following settings:
+
+    - Disable **Open Riot Client on Startup**
+    - Disable **Hardware Acceleration**
+    - Set **Close Window** to **Exit application**
+
+    <Note>
+      These settings prevent Riot Client from running in the background and reduce the risk of it collecting hardware data at the wrong time.
+    </Note>
+  </Step>
+
+  <Step title="Test with a New Account">
+    Create a **new account** using an **Incognito** browser window — do not use your banned account.
+
+    Play on the new account for **24 hours**. If you do not receive a VAL 5 error or a ban during that period, your spoof was successful and you can proceed safely.
+
+    <Tip>
+      Always test on a fresh account first. Never log back into your previously banned account until you have confirmed the spoof is working.
+    </Tip>
+  </Step>
+</Steps>
+
+Your system is now spoofed and ready to use. If you play games protected by EAC, BattlEye, or RICOCHET, continue to the [Network Setup](/spoofer/network-setup) page for additional required steps.

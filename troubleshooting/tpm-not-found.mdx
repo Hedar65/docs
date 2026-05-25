@@ -1,0 +1,41 @@
+---
+title: "TPM or fTPM Not Showing in BIOS: How to Find and Fix"
+description: "Locate TPM or fTPM settings in your BIOS when they are not visible in the standard location, covering Intel PTT and AMD fTPM variants."
+---
+
+TPM (Trusted Platform Module) settings are not always easy to find in the BIOS, as their location varies by motherboard manufacturer and firmware version. Follow the steps below to locate TPM or fTPM on your system.
+
+<Steps>
+  <Step title="Locate Security Settings in BIOS">
+    Enter your BIOS menu at startup (typically by pressing `Del`, `F2`, or `F10` during boot — check your motherboard's documentation for the correct key).
+
+    Once inside, use the arrow keys to navigate the tabs and look for one of the following sections:
+
+    - **Security**
+    - **Advanced**
+    - **Trusted Computing**
+
+    TPM settings are most commonly found under one of these sections.
+  </Step>
+
+  <Step title="Check for TPM or fTPM">
+    Inside the section you located, look for one of the following options depending on your hardware:
+
+    | Option | Platform |
+    |--------|----------|
+    | **TPM** | General (hardware TPM chip) |
+    | **Security Device Support** | General (hardware TPM chip) |
+    | **Intel Platform Trust Technology (PTT)** | Intel systems |
+    | **fTPM** or **AMD fTPM** | AMD systems |
+
+    <Note>
+      A hardware TPM chip typically shows as **"TPM"** or **"Security Device Support"**. A firmware-based TPM will appear as **"AMD fTPM"** or **"Intel PTT"** depending on your processor manufacturer.
+    </Note>
+
+    Enable the option that matches your system, save your BIOS settings, and reboot.
+  </Step>
+</Steps>
+
+<Warning>
+  Always run the spoofer loader as Administrator after making BIOS changes. Right-click the spoofer file and select **"Run as Administrator"** — running it without elevated privileges will cause it to fail.
+</Warning>

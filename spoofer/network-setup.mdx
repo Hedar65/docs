@@ -1,0 +1,126 @@
+---
+title: "Network Setup for EAC, BattlEye, and RICOCHET Games"
+description: "Configure your network adapter and rotate your IP using Cloudflare WARP after spoofing to avoid network-level bans on EAC, BattlEye, and RICOCHET games."
+---
+
+If you play games protected by Easy Anti-Cheat (EAC), BattlEye (BE), or RICOCHET, completing the network setup after spoofing is required. These anti-cheat systems can track your network identity in addition to your hardware serials, so this step ensures your network profile is fully refreshed alongside your HWID.
+
+<Note>
+  If you use EFI, you can skip this page entirely.
+</Note>
+
+## Disable Extra Network Adapters
+
+Leaving extra network adapters enabled can expose additional hardware identifiers. Disable everything except the adapter you are actively using.
+
+<Steps>
+  <Step title="Open Network Connections">
+    Press **Windows + R**, type `ncpa.cpl`, and click **OK**.
+
+    Note the name of your active network connection before proceeding.
+  </Step>
+
+  <Step title="Open Device Manager">
+    Right-click the **Windows logo** in the taskbar and select **Device Manager**.
+  </Step>
+
+  <Step title="Disable All Inactive Network Adapters">
+    In Device Manager, expand the **Network Adapters** section.
+
+    Right-click each adapter and select **Disable device** — disable all of them **except** the one that matches your active connection name you noted in step 1.
+
+    <Warning>
+      Do not disable your active adapter. Disabling the wrong one will cut your internet connection.
+    </Warning>
+  </Step>
+</Steps>
+
+## Change Network Adapter Properties
+
+Fine-tuning your adapter's advanced properties removes additional identifiers that anti-cheat software can read.
+
+<Steps>
+  <Step title="Open Network Connections Again">
+    Press **Windows + R**, type `ncpa.cpl`, and click **OK**.
+  </Step>
+
+  <Step title="Open Adapter Properties">
+    Right-click your active connection and select **Properties**.
+
+    In the list of items, enable **only** the following two items and uncheck everything else:
+
+    - **QoS Packet Scheduler**
+    - **Internet Protocol Version 4 (TCP/IPv4)**
+
+    Click **OK** to save.
+  </Step>
+
+  <Step title="Open Advanced Adapter Settings">
+    Right-click your active connection again, select **Properties**, then click **Configure**.
+
+    Go to the **Advanced** tab.
+  </Step>
+
+  <Step title="Apply the Required Advanced Settings">
+    Find each of the following properties and set them to the values shown:
+
+    ```
+    Advanced EEE             → Disabled
+    Network Address          → Not Present
+    ARP Offload              → Disabled
+    Flow Control             → Disabled
+    IPv4 Checksum Offload    → Disabled
+    Large Send Offload v2 (IPv6) → Disabled
+    TCP Checksum Offload (IPv6)  → Disabled
+    UDP Checksum Offload (IPv6)  → Disabled
+    ```
+
+    <Note>
+      Not all adapters expose every property listed above. Apply the settings that are available and skip any that do not appear.
+    </Note>
+
+    Click **OK** to save your changes.
+  </Step>
+</Steps>
+
+## Rotate Your IP Address
+
+After spoofing, your IP address may still be flagged. Rotating it ensures your network identity does not carry over from before the ban.
+
+<Steps>
+  <Step title="Check and Save Your Current IP">
+    Visit any IP-checking website, note your current IP address, and take a screenshot. You will compare this against your new IP after the rotation.
+  </Step>
+
+  <Step title="Disconnect for 6 Minutes">
+    Turn off your internet connection completely for **6 minutes**, then turn it back on.
+
+    Check your IP address again. It should be different from the one you saved.
+
+    <Warning>
+      If your IP address has not changed, contact your ISP or try the disconnect for a longer period. Do not continue until your IP has rotated.
+    </Warning>
+  </Step>
+
+  <Step title="Set Up Cloudflare WARP">
+    Download and install [Cloudflare WARP](https://1.1.1.1/) (the 1.1.1.1 app).
+
+    Enable WARP and use it **every time you launch the game** for the first **7 days** after your spoof.
+
+    <Tip>
+      Cloudflare WARP will not noticeably affect your ping. It is safe to use for gaming and is the recommended VPN for this process.
+    </Tip>
+  </Step>
+</Steps>
+
+### Why use a VPN for 7 days?
+
+Using a VPN for one week after a ban ensures your network identity is fully refreshed. Some anti-cheat systems track IP-level patterns over time, and a week of clean usage through WARP gives your account enough distance from the original ban. After 7 days, you can disable WARP and play without it.
+
+## Additional Rules
+
+Follow these rules every session to keep your spoof active and functioning correctly:
+
+- **After every restart**, restart your PC **twice** before launching the game.
+- **After waking from sleep** or powering on the next day, restart your PC once more before launching the game. This ensures the spoofer activates correctly on boot.
+- **Delete the spoofer executable and the `SAVE.txt` file** after you have finished using the tool.

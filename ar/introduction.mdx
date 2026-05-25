@@ -1,0 +1,85 @@
+---
+title: "ما هو Mosab Store Spoofer؟ المميزات وطريقة العمل"
+description: "يقوم Mosab Store Spoofer بتغيير معرفات أجهزتك بشكل دائم لتجاوز حظر HWID. تعرف على أنظمة مكافحة الغش المدعومة وكيفية عمل العملية."
+---
+
+Mosab Store Spoofer هو أداة تغيير HWID دائمة تتيح لك تجاوز حظر الأجهزة في ألعاب مثل Valorant وFortnite وRust وApex Legends. توضح هذه الصفحة ما يفعله Mosab Store، وأنظمة مكافحة الغش التي يدعمها، وما يتضمنه عملية الإعداد حتى تعرف ما تتوقعه قبل البدء.
+
+<Warning>
+  اقرأ كل خطوة في هذه الوثائق قبل البدء. لا تتخطَّ أي خطوة — كل خطوة مطلوبة لكي يعمل الـ spoofer بشكل صحيح. إذا كنت غير متأكد من أي جزء من العملية، افتح تذكرة دعم في Discord قبل المتابعة.
+</Warning>
+
+## ما الذي يفعله Mosab Store Spoofer
+
+عندما تتلقى حظر أجهزة، يسجّل نظام مكافحة الغش في اللعبة المعرفات الفريدة لأجهزتك — وهو ما يُعرف بـ HWID. حتى لو أنشأت حسابًا جديدًا، يتبع الحظر جهازك. يقوم Mosab Store بتغيير أرقام تسلسل الأجهزة بشكل دائم حتى لا يتم التعرف على جهازك كمحظور.
+
+يستهدف Mosab Store المعرفات التي تتتبعها أنظمة مكافحة الغش: أرقام تسلسل شريحة TPM، وعناوين MAC، وأرقام تسلسل الشاشات، ومعرفات الأقراص، وبصمات النظام الأخرى.
+
+## أنظمة مكافحة الغش المدعومة
+
+تم تصميم Mosab Store لتجاوز أنظمة مكافحة الغش التالية:
+
+- **RICOCHET** — مستخدم في Call of Duty: Warzone وVanguard، ومُطبَّق في Valorant
+- **EAC (Easy Anti-Cheat)** — مستخدم في Fortnite وRust وApex Legends ومئات العناوين الأخرى
+- **BE (BattlEye)** — مستخدم في PUBG وRainbow Six Siege وDayZ وغيرها
+
+## كيف تعمل العملية
+
+يتبع الإعداد الكامل أربع مراحل رئيسية. يجب إكمال كل مرحلة بالترتيب.
+
+<Steps>
+  <Step title="إعادة تثبيت Windows">
+    تبدأ بتثبيت Windows نظيف. يؤدي ذلك إلى إزالة الآثار التي تركها برنامج مكافحة الغش السابق ويضمن عدم وجود بيانات حظر متبقية على نظامك.
+  </Step>
+  <Step title="ضبط إعدادات BIOS">
+    تقوم بتحديث firmware الـ BIOS، ثم تفعيل TPM والمحاكاة الافتراضية وSecure Boot. يتطلب Mosab Store أن تكون هذه الميزات نشطة لكي يعمل بشكل صحيح.
+  </Step>
+  <Step title="إعداد Windows">
+    بعد إعادة التثبيت، تقوم بضبط Windows — تعطيل Defender، وتثبيت Visual C\+\+ runtimes والتعريفات المطلوبة، وضبط إعدادات الشبكة.
+  </Step>
+  <Step title="تشغيل الـ spoofer">
+    تقوم بتحميل Mosab Store loader، وإدخال مفتاح الترخيص للمصادقة، وتشغيل الـ spoof. يرشدك الـ loader خلال كل إجراء ويؤكد اكتمال العملية.
+  </Step>
+</Steps>
+
+## مفتاح الترخيص والـ loader
+
+يستخدم Mosab Store نظام loader قائم على مفتاح الترخيص. بعد الشراء، تتلقى مفتاحًا يصادق نسختك من البرنامج. تدخل هذا المفتاح في الـ loader قبل تشغيل الـ spoof. احتفظ بمفتاحك آمنًا — لا تشاركه مع أحد.
+
+## الدعم الفني
+
+إذا واجهت أي مشكلات، افتح تذكرة في سيرفر Mosab Store على Discord. يتم تقديم الدعم من خلال التذاكر فقط. لا تتخطَّ الخطوات ثم تتصل بالدعم متوقعًا إصلاحًا — اعمل خلال الوثائق بالترتيب أولًا.
+
+## الخطوات التالية
+
+اتبع الأقسام أدناه بالترتيب لإكمال عملية الإعداد.
+
+<CardGroup cols={2}>
+  <Card title="إعادة تثبيت Windows" icon="windows" href="/setup/windows-reinstall">
+    ابدأ من هنا. يُشترط تثبيت Windows نظيف قبل استخدام Mosab Store.
+  </Card>
+
+  <Card title="تحديث BIOS" icon="microchip" href="/setup/bios-update">
+    قم بتحديث firmware الـ BIOS إلى أحدث إصدار للوحة الأم الخاصة بك.
+  </Card>
+
+  <Card title="إعدادات BIOS" icon="sliders" href="/setup/bios-settings">
+    فعّل TPM والمحاكاة الافتراضية وSecure Boot في إعدادات BIOS.
+  </Card>
+
+  <Card title="ضبط Windows" icon="gear" href="/setup/windows-configuration">
+    عطّل Defender، وثبّت الـ runtimes، واضبط نظامك قبل الـ spoofing.
+  </Card>
+
+  <Card title="تحميل الـ Spoofer" icon="download" href="/spoofer/download">
+    حمّل Mosab Store loader واستعد لتشغيل الـ spoof.
+  </Card>
+
+  <Card title="خطوات الـ Spoof" icon="shield-halved" href="/spoofer/spoof-steps">
+    أدخل مفتاح الترخيص وأكمل عملية الـ spoof الكاملة.
+  </Card>
+
+  <Card title="استكشاف الأخطاء" icon="circle-exclamation" href="/troubleshooting/common-issues">
+    أصلح الأخطاء الشائعة قبل فتح تذكرة دعم.
+  </Card>
+</CardGroup>

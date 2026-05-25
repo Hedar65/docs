@@ -1,0 +1,221 @@
+---
+title: "Configure Windows After Reinstalling for Redline Spoofer"
+description: "Complete the required post-reinstall Windows setup before running Redline Spoofer: disable Defender, install runtimes, and configure networking."
+---
+
+After reinstalling Windows, you need to configure the system before running Redline Spoofer. Work through each section below in order. Do not restart your computer until you have completed all steps — the final step will prompt you to restart.
+
+---
+
+## 1. Disable Windows Defender / Real-Time Protection
+
+The spoofer requires Windows Defender's real-time protection to be turned off before it runs. You can do this manually or with the Defender Control tool.
+
+<Tabs>
+  <Tab title="Manual (Windows Security)">
+    <Steps>
+      <Step title="Open Windows Security">
+        Press the **Windows key** and search for **Windows Security**, then open the app.
+      </Step>
+
+      <Step title="Disable Real-time protection">
+        Go to **Virus & threat protection** → **Manage settings**, then toggle **Real-time protection** to **Off**.
+      </Step>
+    </Steps>
+  </Tab>
+
+  <Tab title="Defender Control Tool">
+    <Steps>
+      <Step title="Download Defender Control">
+        Download the tool from:
+
+        [https://www.sordum.org/files/downloads.php?st-defender-control](https://www.sordum.org/files/downloads.php?st-defender-control)
+      </Step>
+
+      <Step title="Extract the archive">
+        Extract the downloaded ZIP file. The archive password is:
+
+        ```
+        sordum
+        ```
+      </Step>
+
+      <Step title="Run dControl.exe">
+        Open the extracted folder and run `dControl.exe`.
+      </Step>
+
+      <Step title="Disable Windows Defender">
+        Click **Disable Windows Defender** in the tool's interface.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+---
+
+## 2. Disable Startup Programs and Background Apps
+
+Reduce unnecessary background activity that could interfere with the spoofer.
+
+<Steps>
+  <Step title="Disable background apps">
+    Go to **Settings → Privacy → Background apps** and turn off background app activity.
+  </Step>
+
+  <Step title="Disable startup programs">
+    Open **Task Manager** (Ctrl + Shift + Esc), click the **Startup** tab, and disable every entry in the list.
+  </Step>
+</Steps>
+
+<Warning>
+  Do **not** restart your computer after this step. Continue through all remaining steps first and restart only at the end.
+</Warning>
+
+---
+
+## 3. Configure Network Adapter
+
+Strip unnecessary protocols from your network connection to reduce potential identifier exposure.
+
+<Steps>
+  <Step title="Open Network Connections">
+    Press **Win + R**, type `ncpa.cpl`, and press **Enter**.
+  </Step>
+
+  <Step title="Open adapter properties">
+    Right-click your active internet connection (Ethernet or Wi-Fi) and select **Properties**.
+  </Step>
+
+  <Step title="Uncheck all items except two">
+    In the properties list, uncheck everything **except** the following two items:
+
+    - **QoS Packet Scheduler**
+    - **Internet Protocol Version 4 (TCP/IPv4)**
+  </Step>
+
+  <Step title="Save changes">
+    Click **OK** to apply.
+  </Step>
+</Steps>
+
+---
+
+## 4. Install DirectX Runtimes
+
+DirectX runtimes are required for the spoofer and many games to run correctly. Install them from the official Microsoft source.
+
+<Steps>
+  <Step title="Download DirectX End-User Runtime">
+    Download the installer from Microsoft:
+
+    [https://www.microsoft.com/en-us/download/details.aspx?id=35](https://www.microsoft.com/en-us/download/details.aspx?id=35)
+  </Step>
+
+  <Step title="Run the installer">
+    Launch the downloaded file and follow the on-screen instructions until installation completes.
+  </Step>
+</Steps>
+
+---
+
+## 5. Install Visual C++ Redistributable (All-in-One)
+
+The Visual C++ Redistributable packages provide runtime libraries that Redline Spoofer and most modern software depend on. Install the all-in-one bundle to cover all versions at once.
+
+<Steps>
+  <Step title="Download the All-in-One package">
+    Download from TechPowerUp:
+
+    [https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+  </Step>
+
+  <Step title="Extract the archive">
+    Unzip the downloaded file to a folder.
+  </Step>
+
+  <Step title="Run install_all.bat as administrator">
+    Inside the extracted folder, right-click `install_all.bat` and select **Run as administrator**.
+  </Step>
+</Steps>
+
+---
+
+## 6. Disable UAC (User Account Control)
+
+User Account Control (UAC) prompts can interfere with the spoofer's ability to make system-level changes. Disable it before running the loader.
+
+<Steps>
+  <Step title="Open UAC settings">
+    Open the **Start** menu and search for **UAC**. Select **Change User Account Control settings**.
+  </Step>
+
+  <Step title="Set to Never notify">
+    Drag the slider all the way down to **Never notify**.
+  </Step>
+
+  <Step title="Confirm the change">
+    Click **OK** and accept any confirmation prompt that appears.
+  </Step>
+</Steps>
+
+<Warning>
+  Disabling UAC reduces your system's protection level. Only install software you trust while UAC is turned off.
+</Warning>
+
+---
+
+## 7. Install the Latest Graphics Drivers
+
+Install the latest drivers for your GPU from your manufacturer's official website. Outdated or missing drivers can cause issues after Windows reinstallation.
+
+<Tabs>
+  <Tab title="NVIDIA">
+    Download from [nvidia.com/drivers](https://www.nvidia.com/en-us/drivers/).
+  </Tab>
+
+  <Tab title="AMD">
+    Download from [amd.com/support](https://www.amd.com/en/support).
+  </Tab>
+
+  <Tab title="Intel">
+    Download from [intel.com/content/www/us/en/support/detect.html](https://www.intel.com/content/www/us/en/support/detect.html).
+  </Tab>
+</Tabs>
+
+<Tip>
+  During the NVIDIA driver installation, select **Custom Installation** and check **Perform a clean installation** for the best results.
+</Tip>
+
+---
+
+## 8. Enable Core Isolation / Memory Integrity
+
+Memory Integrity is a Windows security feature that Redline Spoofer requires to be active. Enable it in Windows Security before running the loader.
+
+<Steps>
+  <Step title="Open Windows Security">
+    Open the **Start** menu, search for **Windows Security**, and open the app.
+  </Step>
+
+  <Step title="Go to Device Security">
+    Click **Device Security** in the left panel.
+  </Step>
+
+  <Step title="Open Core Isolation Details">
+    Under the **Core isolation** section, click **Core isolation details**.
+  </Step>
+
+  <Step title="Enable Memory Integrity">
+    Toggle **Memory Integrity** to **On**.
+  </Step>
+</Steps>
+
+<Note>
+  If prompted to restart after enabling Memory Integrity, you can restart now — this counts as the final restart at the end of this guide.
+</Note>
+
+---
+
+## Final Step: Restart Your Computer
+
+Once you have completed all steps above, restart your machine. Your system is now configured and ready for Redline Spoofer.

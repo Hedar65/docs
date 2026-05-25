@@ -1,0 +1,68 @@
+---
+title: "How to Troubleshoot Common Redline Spoofer Problems"
+description: "Resolve the most frequent Redline Spoofer problems: missing runtimes, time sync errors, connection failures, and loader permission errors on launch."
+---
+
+If Redline Spoofer is not working as expected, the cause is usually one of a handful of common issues. Work through the fixes below in order to get back up and running quickly.
+
+<AccordionGroup>
+  <Accordion title="Download Required Runtimes">
+    Your system must have the correct DirectX and Visual C++ Redistributables installed. Missing runtimes are one of the most common reasons the spoofer fails to launch.
+
+    - **DirectX:** [Download DirectX](https://www.microsoft.com/en-US/download/details.aspx?id=35)
+    - **Visual C++ Redistributables (All-in-One):** [Download C++ Redistributables AIO](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+
+    Install both packages, then restart your system before running the spoofer again.
+  </Accordion>
+
+  <Accordion title="Sync Your Time and Date">
+    Incorrect time or timezone settings can cause authentication and connection issues with the spoofer.
+
+    <Steps>
+      <Step title="Open Time & Date Settings">
+        Press `Win + I` to open Windows Settings, then navigate to **Time & Language > Date & Time**.
+      </Step>
+      <Step title="Enable Automatic Time Zone">
+        Make sure **"Set Time Zone Automatically"** is turned **ON**.
+      </Step>
+    </Steps>
+
+    <Note>
+      Even if your clock looks correct, disabling and re-enabling the automatic setting forces Windows to re-sync with the time server.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Use Cloudflare Warp 1.1.1.1">
+    Connection or region-based restrictions can prevent the spoofer from reaching its servers. Cloudflare Warp routes your traffic through Cloudflare's network and often resolves these issues.
+
+    <Steps>
+      <Step title="Download Cloudflare Warp">
+        Get the Warp client from the official page: [Download Cloudflare Warp](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/download-warp/)
+      </Step>
+      <Step title="Enable Warp">
+        Open the Warp client and toggle it **on** before launching the spoofer.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="Run Loader as Administrator">
+    The spoofer loader requires elevated privileges to access system-level hardware identifiers. Without administrator rights, it will fail silently or close immediately.
+
+    <Warning>
+      Always run the spoofer loader as Administrator. Running it without elevated privileges will cause it to fail.
+    </Warning>
+
+    <Steps>
+      <Step title="Right-click the spoofer file">
+        Locate the spoofer loader executable in File Explorer.
+      </Step>
+      <Step title="Select Run as Administrator">
+        Right-click the file and choose **"Run as Administrator"** from the context menu.
+      </Step>
+    </Steps>
+
+    <Tip>
+      To avoid repeating this step, right-click the file, go to **Properties > Compatibility**, and check **"Run this program as an administrator"**.
+    </Tip>
+  </Accordion>
+</AccordionGroup>

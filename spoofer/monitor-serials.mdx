@@ -1,0 +1,42 @@
+---
+title: "How to Change Monitor Serials for EAC and BattlEye"
+description: "Use Custom Resolution Utility (CRU) to change your monitor serial numbers and avoid detection by EAC and BattlEye anti-cheat systems after an HWID ban."
+---
+
+Some anti-cheat systems, including Easy Anti-Cheat (EAC) and BattlEye (BE), can read your monitor's serial number as part of their hardware fingerprinting. If your monitor serial was logged before your ban, changing it adds another layer of separation from your previous hardware identity.
+
+<Note>
+  This step is only required for games protected by EAC or BattlEye. If your game uses a different anti-cheat, you can skip this page.
+</Note>
+
+<Steps>
+  <Step title="Download Custom Resolution Utility (CRU)">
+    Download CRU from the official thread:
+
+    [Custom Resolution Utility (CRU) — monitortests.com](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU)
+
+    Extract the archive to a folder you can easily find.
+  </Step>
+
+  <Step title="Disable G-SYNC (if applicable)">
+    If your monitor supports G-SYNC, disable it before making any changes in CRU.
+
+    You can disable G-SYNC from the NVIDIA Control Panel under **Display → Set up G-SYNC**.
+
+    <Note>
+      Skipping this step on a G-SYNC monitor may cause display issues after you apply the changes.
+    </Note>
+  </Step>
+
+  <Step title="Follow the Video Guide">
+    Open CRU and follow the steps shown in the video guide included with the tool download.
+
+    The video walks you through editing the monitor descriptor fields where the serial number is stored.
+
+    <Tip>
+      Take a screenshot of your monitor's current settings in CRU before making changes, so you have a reference if you need to revert.
+    </Tip>
+  </Step>
+</Steps>
+
+Once you have changed your monitor serials and verified the changes were applied, your hardware profile is updated for EAC and BattlEye fingerprinting. Combine this step with the full [HWID spoof process](/spoofer/spoof-steps) and [network setup](/spoofer/network-setup) for the best results.
