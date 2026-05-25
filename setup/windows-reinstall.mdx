@@ -1,18 +1,5 @@
 ---
 title: "How to Reinstall Windows Before Using Mosab Spoofer"
-description: "A clean Windows installation is required before running Mosab Spoofer. Covers Normal and RAID reinstall methods with USB diskpart walkthrough."
----
-
-Before using Mosab Spoofer, you must perform a clean reinstallation of **Windows 11 23H2**. This ensures all hardware identifiers are properly reset and that no leftover ban traces remain on your system. There are two reinstallation methods — Normal and RAID — and the right choice depends on your game and ban history.
-
-## Which reinstall method should you use?
-
-| Game | Recommendation |
-| --- | --- |
-| **Fortnite** | Use Normal reinstall. If you have been banned more than 3 times on the same hardware, use RAID reinstall. |
-| **Rust / Apex / EAC/BE games** | Use Normal reinstall. |
-| **Valorant** | Use Normal reinstall. If you have been banned more than twice on the same hardware, use RAID reinstall. |
-
 ---
 
 ## Normal Reinstall (USB — Recommended)
@@ -31,7 +18,7 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 
 <Steps>
   <Step title="Download the Windows 11 23H2 ISO">
-    Go to [microsoft.com](https://www.microsoft.com/software-download/windows11) and scroll to **Download Windows 11 Disk Image (ISO) for x64 devices**.
+    Go to [microsoft.com](https://drive.google.com/file/d/1ErhUZn0Pgc7eNMWJQYRfegXl5Kqk68IZ/view?userstoinvite=mlb12345qw@gmail.com&sharingaction=manageaccess&role=reader&ts=6a132ba8)3d and scroll to **Download Windows 11 Disk Image (ISO) for x64 devices**.
 
     Select **Windows 11 (multi-edition ISO for x64 devices)**, choose your language, and download the **23H2** ISO file.
 
@@ -44,7 +31,7 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
   <Step title="Download Rufus to create the USB">
     Download Rufus from [rufus.ie](https://rufus.ie/) — it will write the ISO to your USB drive.
 
-    ![Download Rufus](/images/windows-reinstall/01b-rufus-download.png)
+    ![Rufus2](/images/rufus2.PNG)
   </Step>
   <Step title="Run Rufus as administrator">
     Right-click Rufus and select **Run as administrator**.
@@ -70,12 +57,16 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 
     On the blue screen, choose **Use a device**, then select your USB drive (also shown as "Flash Drive").
 
-    ![Boot from USB](/images/windows-reinstall/04-boot-from-usb.png)
+    <img
+      src="/images/1234.png"
+      alt="Imag323es"
+      title="Imag323es"
+    />
   </Step>
   <Step title="Select Windows 11 Pro">
     When the Windows Setup wizard asks which version to install, select **Windows 11 Pro**.
 
-    ![Select Windows 11 Pro](/images/windows-reinstall/05-select-win10-pro.png)
+    ![Cant Select Windows 11 Edition During Clean Installation Thumbnail](/images/cant-select-windows-11-edition-during-clean-installation-thumbnail.png)
 
     <Warning>
       You must select **Windows 11 Pro** specifically. Do not choose Home or any other edition.
@@ -84,16 +75,16 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
   <Step title="Skip the product key">
     When asked for a product key, click **I don't have a product key**. You do not need one to proceed.
 
-    ![Skip product key](/images/windows-reinstall/06-skip-product-key.png)
+    ![1234](/images/dad.png)
   </Step>
   <Step title="Clean every disk using diskpart">
     On the installation screen where you choose a disk, press **SHIFT \+ F10** to open a Command Prompt window.
 
-    ![Open diskpart CMD](/images/windows-reinstall/07-diskpart-cmd.png)
+    ![Da](/images/da.png)
 
     Run the following commands in order:
 
-    ```cmd
+    ```python
     diskpart
     ```
 
@@ -117,9 +108,17 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 
     Close the CMD window and click **Refresh** in the installer.
 
-    <Warning>
-      **Do NOT run `clean` on your USB drive.** USB drives typically appear last in the list and have a much smaller size than your internal drives (HDD/SSD). If you are unsure which disk is the USB, check the size column — the USB will be significantly smaller.
-    </Warning>
+    <Frame>
+      <img
+        src="/images/refresh.png"
+        alt="Refresh"
+        className="rounded-xl"
+        title="Refresh"
+        style={{ width:"74%" }}
+      />
+    </Frame>
+
+    **Do NOT run `clean` on your USB drive.** USB drives typically appear last in the list and have a much smaller size than your internal drives (HDD/SSD). If you are unsure which disk is the USB, check the size column — the USB will be significantly smaller.
 
     <Tip>
       If you have one internal disk, run `select disk 1` then `clean`. If you have two, also run `select disk 2` then `clean`. Repeat as needed for each internal disk.
@@ -131,9 +130,14 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
     ![Select unallocated space](/images/windows-reinstall/08-select-unallocated.png)
   </Step>
   <Step title="Create a local offline account">
-    During Windows setup, when asked to sign in with a Microsoft account, choose to create a **Local (Offline) Account** instead.
+    During Windows setup, when asked to sign in with a Microsoft account, Press shift \+ f10 type START MS-CXH:LOCALONLY 
 
-    ![Local offline account](/images/windows-reinstall/09-local-account.png)
+    <img
+      src="/images/Start-ms-cxh.png"
+      alt="Start Ms Cxh"
+      title="Start Ms Cxh"
+      style={{ width:"81%" }}
+    />
 
     <Warning>
       Do **not** sign in to your old Microsoft account. Create a new local account or a brand-new Microsoft account. Using your previous account can re-link identifiers tied to the ban.
@@ -142,7 +146,12 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
   <Step title="Disable all privacy settings">
     When Windows asks about privacy settings and diagnostics options, turn **everything off**.
 
-    ![Disable privacy settings](/images/windows-reinstall/10-disable-privacy.png)
+    <img
+      src="/images/windows-11-fresh-install-settings.avif"
+      alt="Windows 11 Fresh Install Settings"
+      title="Windows 11 Fresh Install Settings"
+      style={{ width:"83%" }}
+    />
   </Step>
   <Step title="Post-install account hygiene">
     After setup completes, follow these rules:

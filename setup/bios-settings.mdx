@@ -70,11 +70,6 @@ Secure Boot must be enabled with freshly loaded keys. The process involves enter
 </Note>
 
 <Steps>
-  <Step title="Enter BIOS and locate Secure Boot settings">
-    Restart your machine and press the appropriate key to enter BIOS (usually **Del**, **F2**, or **F10** depending on your board).
-
-    ![Enter BIOS](/images/bios-settings/secureboot-01-enter-bios.png)
-  </Step>
   <Step title="Delete all Secure Boot keys">
     Navigate to the Secure Boot section and delete all existing keys.
 
@@ -116,12 +111,22 @@ After completing all three BIOS changes, boot into Windows and confirm each sett
   <Step title="Open System Information">
     Press **Win \+ R**, type `msinfo32`, and press **Enter**.
 
-    ![Open msinfo32](/images/bios-settings/verify-secureboot-01-msinfo32.png)
+    <img
+      src="/images/msinfo.png"
+      alt="Msinfo"
+      title="Msinfo"
+      style={{ width:"52%" }}
+    />
   </Step>
   <Step title="Check Secure Boot State">
     In the System Summary panel, find **Secure Boot State**. It must show **On**.
 
-    ![Secure Boot State On](/images/bios-settings/verify-secureboot-02-state-on.png)
+    <img
+      src="/images/secure-boot.png"
+      alt="Secure Boot"
+      title="Secure Boot"
+      style={{ width:"80%" }}
+    />
   </Step>
 </Steps>
 
@@ -131,12 +136,22 @@ After completing all three BIOS changes, boot into Windows and confirm each sett
   <Step title="Open TPM Management">
     Press **Win \+ R**, type `tpm.msc`, and press **Enter**.
 
-    ![Open tpm.msc](/images/bios-settings/verify-tpm-01-tpmmsc.png)
+    <img
+      src="/images/tpm.msc.png"
+      alt="Tpm Msc"
+      title="Tpm Msc"
+      style={{ width:"56%" }}
+    />
   </Step>
   <Step title="Confirm TPM status">
     The status section should display: **The TPM is ready for use.**
 
-    ![TPM ready for use](/images/bios-settings/verify-tpm-02-ready.png)
+    <img
+      src="/images/trusted-platform-module-management-on-local-computer-windows-10.png"
+      alt="Trusted Platform Module Management On Local Computer Windows 10"
+      title="Trusted Platform Module Management On Local Computer Windows 10"
+      style={{ width:"85%" }}
+    />
   </Step>
 </Steps>
 
@@ -145,18 +160,14 @@ After completing all three BIOS changes, boot into Windows and confirm each sett
 <Steps>
   <Step title="Open Task Manager">
     Press **Ctrl \+ Shift \+ Esc** to open Task Manager.
-
-    ![Open Task Manager](/images/bios-settings/verify-virt-01-taskmgr.png)
   </Step>
   <Step title="Navigate to Performance → CPU">
     Click the **Performance** tab, then select **CPU** from the left panel.
-
-    ![Performance CPU tab](/images/bios-settings/verify-virt-02-performance-cpu.png)
   </Step>
   <Step title="Confirm Virtualization is Enabled">
     Look for the **Virtualization** field in the bottom-right section. It must show **Enabled**.
 
-    ![Virtualization Enabled](/images/bios-settings/verify-virt-03-enabled.png)
+    ![Virual](/images/virual.png)
   </Step>
 </Steps>
 
