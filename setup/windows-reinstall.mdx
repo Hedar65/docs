@@ -8,7 +8,7 @@ Before using Redline Spoofer, you must perform a clean reinstallation of Windows
 ## Which reinstall method should you use?
 
 | Game | Recommendation |
-|---|---|
+| --- | --- |
 | **Fortnite** | Use Normal reinstall. If you have been banned more than 3 times on the same hardware, use RAID reinstall. |
 | **Rust / Apex / EAC/BE games** | Use Normal reinstall. |
 | **Valorant** | Use Normal reinstall. If you have been banned more than twice on the same hardware, use RAID reinstall. |
@@ -19,7 +19,7 @@ Before using Redline Spoofer, you must perform a clean reinstallation of Windows
 
 Reinstalling Windows via USB is strongly recommended because it lets you wipe every disk completely before installation.
 
-**Difficulty:** 8/10 (Very Easy) &nbsp;&nbsp; **Time:** ~15 minutes
+**Difficulty:** 8/10 (Very Easy)    **Time:** ~15 minutes
 
 <Note>
   If multiple attempts have failed and you keep getting banned on the same machine, the problem may be tied to the disk itself. In that case, the USB reinstall method below is the right approach.
@@ -32,38 +32,46 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 <Steps>
   <Step title="Download the Windows 10 Media Creation Tool">
     Go to [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10) and click **Download Now** to get the Media Creation Tool.
-  </Step>
 
+    ![Download Media Creation Tool](/images/windows-reinstall/01-media-creation-tool.png)
+  </Step>
   <Step title="Run as administrator">
     Right-click the downloaded tool and select **Run as administrator**.
-  </Step>
 
+    ![Run as administrator](/images/windows-reinstall/02-run-as-admin.png)
+  </Step>
   <Step title="Create installation media">
     When prompted, select **Create installation media (USB flash drive, DVD, or ISO file)**, then choose **USB Flash Drive** as the media type.
 
     Use all recommended default options and wait for the process to complete. Your USB drive should end up with a Windows setup structure on it.
-  </Step>
 
+    ![Create installation media](/images/windows-reinstall/03-create-installation-media.png)
+  </Step>
   <Step title="Boot from the USB">
     Hold **SHIFT**, then click **Restart** (keep holding SHIFT until the recovery screen appears).
 
     On the blue screen, choose **Use a device**, then select your USB drive (also shown as "Flash Drive").
-  </Step>
 
+    ![Boot from USB](/images/windows-reinstall/04-boot-from-usb.png)
+  </Step>
   <Step title="Select Windows 10 Pro">
     When the Windows Setup wizard asks which version to install, select **Windows 10 Pro**.
+
+    ![Select Windows 10 Pro](/images/windows-reinstall/05-select-win10-pro.png)
 
     <Warning>
       You must select **Windows 10 Pro** specifically. Do not choose Home or any other edition.
     </Warning>
   </Step>
-
   <Step title="Skip the product key">
     When asked for a product key, click **I don't have a product key**. You do not need one to proceed.
-  </Step>
 
+    ![Skip product key](/images/windows-reinstall/06-skip-product-key.png)
+  </Step>
   <Step title="Clean every disk using diskpart">
-    On the installation screen where you choose a disk, press **SHIFT + F10** to open a Command Prompt window.
+    On the installation screen where you choose a disk, press **SHIFT \+ F10** to open a Command Prompt window.
+
+    ![Open diskpart CMD](/images/windows-reinstall/07-diskpart-cmd.png)
 
     Run the following commands in order:
 
@@ -85,7 +93,7 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
     clean
     ```
 
-    Replace `X` with the disk number shown in the list. Repeat `select disk X` + `clean` for every internal disk.
+    Replace `X` with the disk number shown in the list. Repeat `select disk X` \+ `clean` for every internal disk.
 
     After running `clean`, you should see a message like: `DiskPart succeeded in cleaning the disk.`
 
@@ -99,23 +107,25 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
       If you have one internal disk, run `select disk 1` then `clean`. If you have two, also run `select disk 2` then `clean`. Repeat as needed for each internal disk.
     </Tip>
   </Step>
-
   <Step title="Select the main disk and continue">
     After refreshing, select your main disk shown as **Unallocated Space**, then click **Next**. The installation will begin.
-  </Step>
 
+    ![Select unallocated space](/images/windows-reinstall/08-select-unallocated.png)
+  </Step>
   <Step title="Create a local offline account">
     During Windows setup, when asked to sign in with a Microsoft account, choose to create a **Local (Offline) Account** instead.
+
+    ![Local offline account](/images/windows-reinstall/09-local-account.png)
 
     <Warning>
       Do **not** sign in to your old Microsoft account. Create a new local account or a brand-new Microsoft account. Using your previous account can re-link identifiers tied to the ban.
     </Warning>
   </Step>
-
   <Step title="Disable all privacy settings">
     When Windows asks about privacy settings and diagnostics options, turn **everything off**.
-  </Step>
 
+    ![Disable privacy settings](/images/windows-reinstall/10-disable-privacy.png)
+  </Step>
   <Step title="Post-install account hygiene">
     After setup completes, follow these rules:
 
@@ -123,11 +133,10 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
     - Do **not** sign in to GeForce Experience with your old account.
     - Do **not** sign in to Medal with your old account.
   </Step>
-
   <Step title="Install Visual C++ Redistributable">
-    Download and install the Visual C++ runtime to prevent errors when running the spoofer:
+    Download and install the Visual C\+\+ runtime to prevent errors when running the spoofer:
 
-    [https://aka.ms/vs/17/release/vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+    [https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
   </Step>
 </Steps>
 
@@ -139,7 +148,7 @@ If you do not have a USB drive available, you can reset Windows directly from wi
 
 Navigate to:
 
-```
+```text
 Settings > Update & Security > Recovery > Reset this PC > Remove everything
 ```
 

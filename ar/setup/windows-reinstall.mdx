@@ -1,0 +1,162 @@
+---
+title: "كيف تعيد تثبيت Windows قبل استخدام Mosab Spoofer"
+description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosab Spoofer. يغطي طرق التثبيت العادي و RAID مع شرح diskpart عبر USB."
+---
+
+قبل استخدام Mosab Spoofer، يجب عليك إجراء إعادة تثبيت نظيفة لـ Windows. هذا يضمن إعادة تعيين جميع معرّفات الهاردوير بشكل صحيح وعدم بقاء أي آثار حظر على نظامك. هناك طريقتان لإعادة التثبيت — العادية و RAID — والاختيار الصحيح يعتمد على لعبتك وتاريخ الحظر.
+
+## أي طريقة إعادة تثبيت يجب أن تستخدم؟
+
+| اللعبة | التوصية |
+| --- | --- |
+| **Fortnite** | استخدم التثبيت العادي. إذا تم حظرك أكثر من 3 مرات على نفس الجهاز، استخدم RAID. |
+| **Rust / Apex / ألعاب EAC/BE** | استخدم التثبيت العادي. |
+| **Valorant** | استخدم التثبيت العادي. إذا تم حظرك أكثر من مرتين على نفس الجهاز، استخدم RAID. |
+
+---
+
+## التثبيت العادي (USB — موصى به)
+
+إعادة تثبيت Windows عبر USB موصى بها بشدة لأنها تتيح لك مسح كل قرص بالكامل قبل التثبيت.
+
+**الصعوبة:** 8/10 (سهل جداً)    **الوقت:** ~15 دقيقة
+
+<Note>
+  إذا فشلت محاولات عديدة واستمر الحظر على نفس الجهاز، فقد تكون المشكلة مرتبطة بالقرص نفسه. في هذه الحالة، طريقة إعادة التثبيت عبر USB أدناه هي النهج الصحيح.
+</Note>
+
+<Note>
+  بعد إعادة التثبيت، عادةً ما يقوم Windows بتثبيت تعريفات الشبكة تلقائياً. إذا لم يفعل، نزّل تعريف LAN للوحة الأم مسبقاً واحفظه على USB.
+</Note>
+
+<Steps>
+  <Step title="تنزيل Media Creation Tool لـ Windows 10">
+    اذهب إلى [microsoft.com](https://www.microsoft.com/en-us/software-download/windows10) واضغط **Download Now** للحصول على Media Creation Tool.
+
+    ![تنزيل Media Creation Tool](/images/windows-reinstall/01-media-creation-tool.png)
+  </Step>
+  <Step title="تشغيل كمسؤول">
+    اضغط بزر الفأرة الأيمن على الأداة المنزّلة واختر **Run as administrator**.
+
+    ![تشغيل كمسؤول](/images/windows-reinstall/02-run-as-admin.png)
+  </Step>
+  <Step title="إنشاء وسائط تثبيت">
+    عند المطالبة، اختر **Create installation media (USB flash drive, DVD, or ISO file)**، ثم اختر **USB Flash Drive** كنوع وسائط.
+
+    استخدم جميع الخيارات الافتراضية الموصى بها وانتظر اكتمال العملية.
+
+    ![إنشاء وسائط تثبيت](/images/windows-reinstall/03-create-installation-media.png)
+  </Step>
+  <Step title="الإقلاع من USB">
+    اضغط مع الاستمرار على **SHIFT**، ثم اضغط **Restart** (استمر بالضغط حتى تظهر شاشة الاسترداد).
+
+    في الشاشة الزرقاء، اختر **Use a device**، ثم اختر USB.
+
+    ![الإقلاع من USB](/images/windows-reinstall/04-boot-from-usb.png)
+  </Step>
+  <Step title="اختيار Windows 10 Pro">
+    عندما يسألك معالج إعداد Windows عن أي نسخة تثبت، اختر **Windows 10 Pro**.
+
+    ![اختيار Windows 10 Pro](/images/windows-reinstall/05-select-win10-pro.png)
+
+    <Warning>
+      يجب اختيار **Windows 10 Pro** تحديداً. لا تختر Home أو أي نسخة أخرى.
+    </Warning>
+  </Step>
+  <Step title="تخطي مفتاح المنتج">
+    عندما يُطلب مفتاح المنتج، اضغط **I don't have a product key**.
+
+    ![تخطي مفتاح المنتج](/images/windows-reinstall/06-skip-product-key.png)
+  </Step>
+  <Step title="مسح كل قرص باستخدام diskpart">
+    في شاشة التثبيت حيث تختار القرص، اضغط **SHIFT \+ F10** لفتح نافذة Command Prompt.
+
+    ![فتح diskpart CMD](/images/windows-reinstall/07-diskpart-cmd.png)
+
+    شغّل الأوامر التالية بالترتيب:
+
+    ```cmd
+    diskpart
+    ```
+
+    ```cmd
+    list disk
+    ```
+
+    هذا يعرض جميع الأقراص. لكل قرص **عدا USB**، شغّل:
+
+    ```cmd
+    select disk X
+    ```
+
+    ```cmd
+    clean
+    ```
+
+    استبدل `X` برقم القرص الظاهر. كرر `select disk X` \+ `clean` لكل قرص داخلي.
+
+    <Warning>
+      **لا تشغّل `clean` على قرص USB.** أقراص USB عادةً تظهر في النهاية وحجمها أصغر بكثير من الأقراص الداخلية.
+    </Warning>
+
+    <Tip>
+      إذا كان لديك قرص داخلي واحد، شغّل `select disk 1` ثم `clean`. إذا كان لديك قرصان، شغّل أيضاً `select disk 2` ثم `clean`.
+    </Tip>
+  </Step>
+  <Step title="اختر القرص الرئيسي وأكمل">
+    بعد التحديث، اختر القرص الرئيسي الظاهر كـ **Unallocated Space**، ثم اضغط **Next**.
+
+    ![اختيار Unallocated space](/images/windows-reinstall/08-select-unallocated.png)
+  </Step>
+  <Step title="إنشاء حساب محلي بدون اتصال">
+    أثناء إعداد Windows، عند طلب تسجيل الدخول بحساب Microsoft، اختر إنشاء **Local (Offline) Account** بدلاً من ذلك.
+
+    ![حساب محلي](/images/windows-reinstall/09-local-account.png)
+
+    <Warning>
+      لا تسجّل الدخول بحساب Microsoft القديم. أنشئ حساباً محلياً جديداً أو حساب Microsoft جديد تماماً.
+    </Warning>
+  </Step>
+  <Step title="تعطيل جميع إعدادات الخصوصية">
+    عندما يسأل Windows عن إعدادات الخصوصية والتشخيص، أوقف **كل شيء**.
+
+    ![تعطيل الخصوصية](/images/windows-reinstall/10-disable-privacy.png)
+  </Step>
+  <Step title="نظافة الحساب بعد التثبيت">
+    بعد اكتمال الإعداد، اتبع هذه القواعد:
+
+    - **لا** تسجّل الدخول إلى OneDrive بحسابك القديم.
+    - **لا** تسجّل الدخول إلى GeForce Experience بحسابك القديم.
+    - **لا** تسجّل الدخول إلى Medal بحسابك القديم.
+  </Step>
+  <Step title="تثبيت Visual C++ Redistributable">
+    نزّل وثبّت Visual C\+\+ runtime لمنع الأخطاء:
+
+    [https://aka.ms/vs/17/release/vc\_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+  </Step>
+</Steps>
+
+---
+
+## بديل: إعادة التثبيت بدون USB
+
+إذا لم يتوفر لديك USB، يمكنك إعادة تعيين Windows من داخل النظام. هذه الطريقة تستغرق وقتاً أطول (1–3 ساعات) وأقل شمولاً.
+
+انتقل إلى:
+
+```text
+Settings > Update & Security > Recovery > Reset this PC > Remove everything
+```
+
+اضبط الخيارات التالية:
+
+- **Cloud download** — نعم
+- **Change settings → Clean data** — نعم
+- **Delete files from all drives** — نعم
+- **Download Windows** — نعم
+
+اضغط **Confirm** و **Next** للبدء.
+
+<Note>
+  هذه الطريقة لا تعطي نفس مستوى تنظيف القرص مثل طريقة USB مع `diskpart`. مقبولة للمحاولة الأولى لكن طريقة USB دائماً مفضلة.
+</Note>

@@ -1,0 +1,68 @@
+---
+title: "كيف تحل المشاكل الشائعة في Mosab Spoofer"
+description: "حل أكثر مشاكل Mosab Spoofer شيوعاً: runtimes مفقودة، أخطاء مزامنة الوقت، وفشل الاتصال."
+---
+
+إذا لم يعمل Mosab Spoofer كما هو متوقع، فالسبب عادةً أحد المشاكل الشائعة.
+
+<AccordionGroup>
+  <Accordion title="تنزيل الـ Runtimes المطلوبة">
+    يجب تثبيت DirectX و Visual C\+\+ Redistributables الصحيحة.
+
+    - **DirectX:** [تنزيل DirectX](https://www.microsoft.com/en-US/download/details.aspx?id=35)
+    - **Visual C\+\+ Redistributables (All-in-One):** [تنزيل AIO](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+
+    ثبّت الحزمتين وأعد تشغيل النظام.
+  </Accordion>
+
+  <Accordion title="مزامنة الوقت والتاريخ">
+    إعدادات الوقت أو المنطقة الزمنية غير الصحيحة قد تسبب مشاكل.
+
+    <Steps>
+      <Step title="فتح Time & Date Settings">
+        اضغط `Win + I` وانتقل إلى **Time & Language \> Date & Time**.
+
+        ![Date & Time settings](/images/troubleshooting/time-01-settings.png)
+      </Step>
+      <Step title="تفعيل Automatic Time Zone">
+        تأكد أن **"Set Time Zone Automatically"** مفعّل.
+
+        ![Set Time Zone Automatically](/images/troubleshooting/time-02-auto-tz.png)
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="استخدم Cloudflare Warp 1.1.1.1">
+    <Steps>
+      <Step title="تنزيل Cloudflare Warp">
+        [تنزيل Cloudflare Warp](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/download-warp/)
+
+        ![تنزيل Warp](/images/troubleshooting/warp-01-download.png)
+      </Step>
+      <Step title="تفعيل Warp">
+        افتح التطبيق وفعّله قبل تشغيل الـ spoofer.
+
+        ![تفعيل Warp](/images/troubleshooting/warp-02-enable.png)
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="تشغيل الـ Loader كمسؤول">
+    <Warning>
+      دائماً شغّل الـ loader كمسؤول.
+    </Warning>
+
+    <Steps>
+      <Step title="اضغط بزر الفأرة الأيمن على ملف الـ spoofer">
+        حدد ملف الـ loader في File Explorer.
+
+        ![تحديد الملف](/images/troubleshooting/admin-01-locate.png)
+      </Step>
+      <Step title="اختر Run as Administrator">
+        اختر **Run as Administrator**.
+
+        ![Run as Administrator](/images/troubleshooting/admin-02-run-as-admin.png)
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>

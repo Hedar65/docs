@@ -1,0 +1,121 @@
+---
+title: "إعداد الشبكة لألعاب EAC و BattlEye و RICOCHET"
+description: "اضبط محول الشبكة وغيّر IP بـ Cloudflare WARP بعد الـ spoof."
+---
+
+إذا لعبت ألعاب EAC أو BattlEye أو RICOCHET، فإعداد الشبكة بعد الـ spoof مطلوب.
+
+<Note>
+  إذا كنت تستخدم EFI، يمكنك تخطي هذه الصفحة.
+</Note>
+
+## تعطيل محولات الشبكة الإضافية
+
+<Steps>
+  <Step title="فتح Network Connections">
+    اضغط **Windows \+ R**، اكتب `ncpa.cpl`، واضغط **OK**.
+
+    دوّن اسم اتصال الشبكة النشط.
+
+    ![ncpa.cpl](/images/network-setup/01-ncpa-active.png)
+  </Step>
+  <Step title="فتح Device Manager">
+    اضغط بزر الفأرة الأيمن على **شعار Windows** واختر **Device Manager**.
+
+    ![Device Manager](/images/network-setup/02-device-manager.png)
+  </Step>
+  <Step title="تعطيل جميع محولات الشبكة غير النشطة">
+    في Device Manager، وسّع **Network Adapters**.
+
+    اضغط بزر الفأرة الأيمن على كل محول واختر **Disable device** — عطّل الجميع **عدا** النشط.
+
+    ![تعطيل المحولات](/images/network-setup/03-disable-adapters.png)
+
+    <Warning>
+      لا تعطل المحول النشط.
+    </Warning>
+  </Step>
+</Steps>
+
+## تغيير خصائص محول الشبكة
+
+<Steps>
+  <Step title="فتح Network Connections مجدداً">
+    اضغط **Windows \+ R**، اكتب `ncpa.cpl`، واضغط **OK**.
+
+    ![ncpa.cpl مجدداً](/images/network-setup/04-ncpa-again.png)
+  </Step>
+  <Step title="فتح Adapter Properties">
+    اضغط بزر الفأرة الأيمن على الاتصال واختر **Properties**.
+
+    فعّل **فقط**:
+
+    - **QoS Packet Scheduler**
+    - **Internet Protocol Version 4 (TCP/IPv4)**
+
+    ![Adapter properties](/images/network-setup/05-adapter-properties.png)
+  </Step>
+  <Step title="فتح Advanced Adapter Settings">
+    اضغط بزر الفأرة الأيمن على الاتصال مجدداً، **Properties**، ثم **Configure**.
+
+    اذهب إلى علامة **Advanced**.
+
+    ![Advanced tab](/images/network-setup/06-advanced-tab.png)
+  </Step>
+  <Step title="تطبيق الإعدادات المطلوبة">
+    اضبط كل خاصية على القيمة الموضحة:
+
+    ```text
+    Advanced EEE             → Disabled
+    Network Address          → Not Present
+    ARP Offload              → Disabled
+    Flow Control             → Disabled
+    IPv4 Checksum Offload    → Disabled
+    Large Send Offload v2 (IPv6) → Disabled
+    TCP Checksum Offload (IPv6)  → Disabled
+    UDP Checksum Offload (IPv6)  → Disabled
+    ```
+
+    اضغط **OK**.
+
+    ![Advanced settings](/images/network-setup/07-advanced-settings.png)
+  </Step>
+</Steps>
+
+## تغيير عنوان IP
+
+<Steps>
+  <Step title="تحقق واحفظ IP الحالي">
+    زر أي موقع لفحص IP، دوّن IP الحالي وخذ لقطة شاشة.
+
+    ![فحص IP](/images/network-setup/08-check-ip.png)
+  </Step>
+  <Step title="افصل الاتصال لمدة 6 دقائق">
+    أوقف الانترنت تماماً لمدة **6 دقائق**، ثم أعد تشغيله.
+
+    تحقق من IP مجدداً. يجب أن يكون مختلفاً.
+
+    ![فصل الاتصال](/images/network-setup/09-disconnect.png)
+
+    <Warning>
+      إذا لم يتغير IP، اتصل بمزود خدمة الإنترنت أو جرّب فترة أطول.
+    </Warning>
+  </Step>
+  <Step title="إعداد Cloudflare WARP">
+    نزّل وثبّت [Cloudflare WARP](https://1.1.1.1/).
+
+    فعّل WARP واستخدمه في **كل مرة تشغّل فيها اللعبة** لمدة **7 أيام** بعد الـ spoof.
+
+    ![Cloudflare WARP](/images/network-setup/10-warp.png)
+  </Step>
+</Steps>
+
+### لماذا استخدام VPN لمدة 7 أيام؟
+
+استخدام VPN لمدة أسبوع بعد الحظر يضمن تجديد هوية شبكتك بالكامل. بعد 7 أيام، يمكنك إيقاف WARP.
+
+## قواعد إضافية
+
+- **بعد كل إعادة تشغيل**، أعد تشغيل الجهاز **مرتين** قبل تشغيل اللعبة.
+- **بعد الخروج من السبات** أو التشغيل في اليوم التالي، أعد تشغيل الجهاز مرة إضافية قبل تشغيل اللعبة.
+- **احذف ملف الـ spoofer وملف `SAVE.txt`** بعد الانتهاء.

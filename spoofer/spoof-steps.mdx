@@ -14,50 +14,66 @@ This page walks you through the complete HWID spoof process using the Redline lo
     Download [SerialChecker](https://drive.google.com/file/d/1dnUHaDajJaqNSno1SsDFDFDuOQhrMNtQ/view?usp=sharing) and run it.
 
     Note your current hardware serials and take a screenshot. Save the screenshot — you will use it later to confirm that the spoof changed your serials successfully.
-  </Step>
 
+    ![SerialChecker showing current serials](/images/spoof-steps/01-serialchecker.png)
+  </Step>
   <Step title="Clear TPM">
     Open the TPM management console and clear your TPM chip.
 
-    1. Press **Windows + R**, type `tpm.msc`, and press **Enter**.
+    1. Press **Windows \+ R**, type `tpm.msc`, and press **Enter**.
     2. Click **Clear TPM**.
     3. Click the **Restart** button and wait for your PC to restart fully.
+
+    ![Clear TPM in tpm.msc](/images/spoof-steps/02-clear-tpm.png)
 
     <Warning>
       Your PC will restart as part of this step. Save any open work before proceeding.
     </Warning>
   </Step>
-
   <Step title="Download and Run the Loader as Administrator">
     After your PC restarts, download the loader from [loader.cryptauth.net](https://loader.cryptauth.net/) using your license key.
 
     Right-click the loader and select **Run as administrator**, then log in with your provided key.
-  </Step>
 
+    ![Loader run as admin and login](/images/spoof-steps/03-loader-login.png)
+  </Step>
   <Step title="Run the PERM Spoof Process">
     Inside the loader, complete the following actions in order:
 
     1. Log in with your license key.
     2. Click **MAC Spoof** and run it.
+
+    ![MAC Spoof button](/images/spoof-steps/04-mac-spoof.png)
+
     3. Click **Driverless TPM Spoof** and run it.
+
+    ![Driverless TPM Spoof button](/images/spoof-steps/05-tpm-spoof.png)
+
     4. Check your new TPM serials using SerialChecker.
+
+    ![Verify TPM serials changed](/images/spoof-steps/06-verify-tpm.png)
 
     <Warning>
       If your TPM serials have **not** changed after running Driverless TPM Spoof, do not continue. Go back and follow the setup guide again, or open a support ticket.
     </Warning>
 
     5. Click **PERM Spoof** and run it.
-    6. Run SerialChecker again and verify that all serials have changed from your original screenshot.
-  </Step>
 
+    ![PERM Spoof button](/images/spoof-steps/07-perm-spoof.png)
+
+    6. Run SerialChecker again and verify that all serials have changed from your original screenshot.
+
+    ![Verify all serials changed](/images/spoof-steps/08-verify-all.png)
+  </Step>
   <Step title="Install Valorant">
     Install Valorant fresh after the spoof is complete.
+
+    ![Install Valorant](/images/spoof-steps/09-install-valorant.png)
 
     <Warning>
       When Windows Firewall asks for permission during installation, click **Cancel** or the **X** button. Do **not** click Allow. Granting firewall access can expose your hardware identity before the spoof is fully registered.
     </Warning>
   </Step>
-
   <Step title="Configure Riot Client Settings">
     Before launching the game, open Riot Client and apply the following settings:
 
@@ -65,15 +81,18 @@ This page walks you through the complete HWID spoof process using the Redline lo
     - Disable **Hardware Acceleration**
     - Set **Close Window** to **Exit application**
 
+    ![Riot Client settings](/images/spoof-steps/10-riot-client-settings.png)
+
     <Note>
       These settings prevent Riot Client from running in the background and reduce the risk of it collecting hardware data at the wrong time.
     </Note>
   </Step>
-
   <Step title="Test with a New Account">
     Create a **new account** using an **Incognito** browser window — do not use your banned account.
 
     Play on the new account for **24 hours**. If you do not receive a VAL 5 error or a ban during that period, your spoof was successful and you can proceed safely.
+
+    ![Create new account in Incognito](/images/spoof-steps/11-new-account.png)
 
     <Tip>
       Always test on a fresh account first. Never log back into your previously banned account until you have confirmed the spoof is working.

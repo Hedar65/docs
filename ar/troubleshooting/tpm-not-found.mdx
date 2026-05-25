@@ -1,0 +1,38 @@
+---
+title: "TPM أو fTPM غير ظاهر في BIOS: كيف تجده وتصلحه"
+description: "احدد إعدادات TPM أو fTPM في BIOS عندما لا تكون مرئية في الموقع القياسي."
+---
+
+إعدادات TPM ليست دائماً سهلة العثور عليها في BIOS، حيث يختلف موقعها حسب الشركة المصنعة.
+
+<Steps>
+  <Step title="حدّد Security Settings في BIOS">
+    ادخل قائمة BIOS (عادةً `Del` أو `F2` أو `F10`).
+
+    ابحث عن أحد هذه الأقسام:
+
+    - **Security**
+    - **Advanced**
+    - **Trusted Computing**
+
+    ![علامات تبويب BIOS](/images/tpm-not-found/01-bios-tabs.png)
+  </Step>
+  <Step title="ابحث عن TPM أو fTPM">
+    داخل القسم، ابحث عن:
+
+    | الخيار | المنصة |
+    | --- | --- |
+    | **TPM** | عام (شريحة TPM) |
+    | **Security Device Support** | عام |
+    | **Intel Platform Trust Technology (PTT)** | Intel |
+    | **fTPM** أو **AMD fTPM** | AMD |
+
+    فعّل الخيار المناسب واحفظ وأعد التشغيل.
+
+    ![تفعيل TPM](/images/tpm-not-found/02-enable-tpm.png)
+  </Step>
+</Steps>
+
+<Warning>
+  دائماً شغّل الـ spoofer كمسؤول بعد تغييرات BIOS.
+</Warning>

@@ -12,40 +12,88 @@
     "default": "dark"
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Documentation",
-        "groups": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Get Started",
-            "pages": [
-              "introduction"
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Get Started",
+                "pages": [
+                  "introduction"
+                ]
+              },
+              {
+                "group": "Setup Guide",
+                "pages": [
+                  "setup/windows-reinstall",
+                  "setup/bios-update",
+                  "setup/bios-settings",
+                  "setup/windows-configuration"
+                ]
+              },
+              {
+                "group": "Using the Spoofer",
+                "pages": [
+                  "spoofer/download",
+                  "spoofer/spoof-steps",
+                  "spoofer/network-setup",
+                  "spoofer/monitor-serials"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "pages": [
+                  "troubleshooting/common-issues",
+                  "troubleshooting/tpm-not-found",
+                  "troubleshooting/spoofer-not-opening"
+                ]
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "language": "ar",
+        "tabs": [
           {
-            "group": "Setup Guide",
-            "pages": [
-              "setup/windows-reinstall",
-              "setup/bios-update",
-              "setup/bios-settings",
-              "setup/windows-configuration"
-            ]
-          },
-          {
-            "group": "Using the Spoofer",
-            "pages": [
-              "spoofer/download",
-              "spoofer/spoof-steps",
-              "spoofer/network-setup",
-              "spoofer/monitor-serials"
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "pages": [
-              "troubleshooting/common-issues",
-              "troubleshooting/tpm-not-found",
-              "troubleshooting/spoofer-not-opening"
+            "tab": "التوثيق",
+            "groups": [
+              {
+                "group": "ابدأ هنا",
+                "pages": [
+                  "ar/introduction"
+                ]
+              },
+              {
+                "group": "دليل الإعداد",
+                "pages": [
+                  "ar/setup/windows-reinstall",
+                  "ar/setup/bios-update",
+                  "ar/setup/bios-settings",
+                  "ar/setup/windows-configuration"
+                ]
+              },
+              {
+                "group": "استخدام الـ Spoofer",
+                "pages": [
+                  "ar/spoofer/download",
+                  "ar/spoofer/spoof-steps",
+                  "ar/spoofer/network-setup",
+                  "ar/spoofer/monitor-serials"
+                ]
+              },
+              {
+                "group": "حل المشاكل",
+                "pages": [
+                  "ar/troubleshooting/common-issues",
+                  "ar/troubleshooting/tpm-not-found",
+                  "ar/troubleshooting/spoofer-not-opening"
+                ]
+              }
             ]
           }
         ]

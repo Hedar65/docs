@@ -18,21 +18,18 @@ TPM is required by Windows 11 and by Valorant's Vanguard anti-cheat. Enable it i
     - Intel CPU: start at **00:00**
     - AMD CPU: start at **01:05**
   </Tab>
-
   <Tab title="ASUS">
     [Watch guide](https://streamable.com/sicp16)
 
     - Intel CPU: start at **00:00**
     - AMD CPU: start at **01:20**
   </Tab>
-
   <Tab title="ASROCK">
     [Watch guide](https://streamable.com/ec8u3s)
 
     - Intel CPU: start at **00:00**
     - AMD CPU: start at **01:35**
   </Tab>
-
   <Tab title="GIGABYTE">
     [Watch guide](https://streamable.com/1qhn35)
 
@@ -51,15 +48,12 @@ Virtualization must be enabled for Redline Spoofer to operate correctly. Follow 
   <Tab title="MSI">
     [Watch guide](https://youtu.be/vyjWTXQW9x8)
   </Tab>
-
   <Tab title="ASUS">
     [Watch guide](https://youtu.be/bQDVvhtBeO4)
   </Tab>
-
   <Tab title="ASROCK">
     [Watch guide](https://youtu.be/JULTTn3TPnw)
   </Tab>
-
   <Tab title="GIGABYTE">
     [Watch guide](https://youtu.be/dpKGbtWl9Mo)
   </Tab>
@@ -78,14 +72,18 @@ Secure Boot must be enabled with freshly loaded keys. The process involves enter
 <Steps>
   <Step title="Enter BIOS and locate Secure Boot settings">
     Restart your machine and press the appropriate key to enter BIOS (usually **Del**, **F2**, or **F10** depending on your board).
-  </Step>
 
+    ![Enter BIOS](/images/bios-settings/secureboot-01-enter-bios.png)
+  </Step>
   <Step title="Delete all Secure Boot keys">
     Navigate to the Secure Boot section and delete all existing keys.
-  </Step>
 
+    ![Delete Secure Boot keys](/images/bios-settings/secureboot-02-delete-keys.png)
+  </Step>
   <Step title="Reload default keys">
     After deleting, select the option to reload or restore default keys. Save and exit BIOS.
+
+    ![Reload default keys](/images/bios-settings/secureboot-03-reload-keys.png)
   </Step>
 </Steps>
 
@@ -95,15 +93,12 @@ Follow the guide for your motherboard brand:
   <Tab title="MSI">
     [Watch guide](https://youtu.be/qZ_JWBqmZF0)
   </Tab>
-
   <Tab title="ASUS">
     [Watch guide](https://youtu.be/990PO3CH30Q)
   </Tab>
-
   <Tab title="ASROCK">
     [Watch guide](https://youtu.be/Z1sF11v7tO0)
   </Tab>
-
   <Tab title="GIGABYTE">
     [Watch guide](https://youtu.be/-713dbChxRA)
   </Tab>
@@ -119,11 +114,14 @@ After completing all three BIOS changes, boot into Windows and confirm each sett
 
 <Steps>
   <Step title="Open System Information">
-    Press **Win + R**, type `msinfo32`, and press **Enter**.
-  </Step>
+    Press **Win \+ R**, type `msinfo32`, and press **Enter**.
 
+    ![Open msinfo32](/images/bios-settings/verify-secureboot-01-msinfo32.png)
+  </Step>
   <Step title="Check Secure Boot State">
     In the System Summary panel, find **Secure Boot State**. It must show **On**.
+
+    ![Secure Boot State On](/images/bios-settings/verify-secureboot-02-state-on.png)
   </Step>
 </Steps>
 
@@ -131,11 +129,14 @@ After completing all three BIOS changes, boot into Windows and confirm each sett
 
 <Steps>
   <Step title="Open TPM Management">
-    Press **Win + R**, type `tpm.msc`, and press **Enter**.
-  </Step>
+    Press **Win \+ R**, type `tpm.msc`, and press **Enter**.
 
+    ![Open tpm.msc](/images/bios-settings/verify-tpm-01-tpmmsc.png)
+  </Step>
   <Step title="Confirm TPM status">
     The status section should display: **The TPM is ready for use.**
+
+    ![TPM ready for use](/images/bios-settings/verify-tpm-02-ready.png)
   </Step>
 </Steps>
 
@@ -143,15 +144,19 @@ After completing all three BIOS changes, boot into Windows and confirm each sett
 
 <Steps>
   <Step title="Open Task Manager">
-    Press **Ctrl + Shift + Esc** to open Task Manager.
-  </Step>
+    Press **Ctrl \+ Shift \+ Esc** to open Task Manager.
 
+    ![Open Task Manager](/images/bios-settings/verify-virt-01-taskmgr.png)
+  </Step>
   <Step title="Navigate to Performance → CPU">
     Click the **Performance** tab, then select **CPU** from the left panel.
-  </Step>
 
+    ![Performance CPU tab](/images/bios-settings/verify-virt-02-performance-cpu.png)
+  </Step>
   <Step title="Confirm Virtualization is Enabled">
     Look for the **Virtualization** field in the bottom-right section. It must show **Enabled**.
+
+    ![Virtualization Enabled](/images/bios-settings/verify-virt-03-enabled.png)
   </Step>
 </Steps>
 
