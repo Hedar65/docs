@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
+  "theme": "sequoia",
   "name": "Mosab Store",
   "favicon": "https://icons.duckduckgo.com/ip3/redline-1.gitbook.io.ico",
   "colors": {
@@ -9,7 +9,7 @@
     "dark": "#7F1D1D"
   },
   "appearance": {
-    "default": "dark"
+    "default": "system"
   },
   "navigation": {
     "languages": [
