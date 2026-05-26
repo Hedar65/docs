@@ -97,5 +97,11 @@
         ]
       }
     ]
+  },
+  "contextual": {
+    "options": [
+      "chatgpt"
+    ],
+    "display": "header"
   }
 }
