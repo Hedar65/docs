@@ -1,9 +1,9 @@
 ---
-title: "ضبط Windows بعد إعادة التثبيت لـ Mosab Spoofer"
-description: "أكمل إعداد Windows بعد إعادة التثبيت قبل تشغيل Mosab Spoofer."
+title: "ضبط Windows بعد إعادة التثبيت لـ Spoofer"
+description: "أكمل إعداد Windows بعد إعادة التثبيت قبل تشغيل  Spoofer."
 ---
 
-بعد إعادة تثبيت Windows، تحتاج إلى ضبط النظام قبل تشغيل Mosab Spoofer. لا تعد التشغيل حتى تكمل كل الخطوات.
+بعد إعادة تثبيت Windows، تحتاج إلى ضبط النظام قبل تشغيل Spoofer. لا تعد التشغيل حتى تكمل كل الخطوات.
 
 ---
 
@@ -15,12 +15,22 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
       <Step title="فتح Windows Security">
         اضغط مفتاح **Windows** وابحث عن **Windows Security**.
 
-        ![فتح Windows Security](/images/windows-config/defender-01-open-security.png)
+        <img
+          src="/images/ح-Windows-Security.png"
+          alt="ح Windows Security"
+          title="ح Windows Security"
+          style={{ width:"92%" }}
+        />
       </Step>
       <Step title="تعطيل Real-time protection">
         اذهب إلى **Virus & threat protection → Manage settings**، ثم أوقف **Real-time protection**.
 
-        ![تعطيل real-time protection](/images/windows-config/defender-02-realtime-off.png)
+        <img
+          src="/images/v4-460px-Disable-Virus-Protection-on-Your-Computer-Step-6.jpg"
+          alt="V4 460px Disable Virus Protection On Your Computer Step 6"
+          title="V4 460px Disable Virus Protection On Your Computer Step 6"
+          style={{ width:"93%" }}
+        />
       </Step>
     </Steps>
   </Tab>
@@ -28,8 +38,6 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
     <Steps>
       <Step title="تنزيل Defender Control">
         [https://www.sordum.org/files/downloads.php?st-defender-control](https://www.sordum.org/files/downloads.php?st-defender-control)
-
-        ![تنزيل Defender Control](/images/windows-config/dcontrol-01-download.png)
       </Step>
       <Step title="فك الأرشيف">
         كلمة السر:
@@ -37,18 +45,16 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
         ```text
         sordum
         ```
-
-        ![فك الأرشيف](/images/windows-config/dcontrol-02-extract.png)
       </Step>
       <Step title="تشغيل dControl.exe">
         افتح المجلد وشغّل `dControl.exe`.
-
-        ![تشغيل dControl.exe](/images/windows-config/dcontrol-03-run.png)
       </Step>
       <Step title="تعطيل Windows Defender">
         اضغط **Disable Windows Defender**.
 
-        ![تعطيل Defender](/images/windows-config/dcontrol-04-disable.png)
+        <Frame>
+          ![Ruiso](/images/m14.png)
+        </Frame>
       </Step>
     </Steps>
   </Tab>
@@ -61,13 +67,11 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
 <Steps>
   <Step title="تعطيل Background apps">
     اذهب إلى **Settings → Privacy → Background apps**.
-
-    ![تعطيل background apps](/images/windows-config/startup-01-background-apps.png)
   </Step>
   <Step title="تعطيل Startup programs">
     افتح **Task Manager** → **Startup** وعطّل كل إدخال.
 
-    ![تعطيل Startup](/images/windows-config/startup-02-task-manager.png)
+    ![Select An App That Has The Enabled Status Then Click The Disable Button Towards The Upper Right Corner Of The Window](/images/select-an-app-that-has-the-enabled-status-then-click-the-disable-button-towards-the-upper-right-corner-of-the-window.avif)
   </Step>
 </Steps>
 
@@ -82,26 +86,18 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
 <Steps>
   <Step title="فتح Network Connections">
     اضغط **Win \+ R**، اكتب `ncpa.cpl`، واضغط **Enter**.
-
-    ![فتح ncpa.cpl](/images/windows-config/network-01-ncpa.png)
   </Step>
   <Step title="فتح Properties المحول">
     اضغط بزر الفأرة الأيمن على الاتصال النشط واختر **Properties**.
-
-    ![Adapter properties](/images/windows-config/network-02-properties.png)
   </Step>
   <Step title="ألغ التحديد عدا اثنين">
     أبق فقط:
 
     - **QoS Packet Scheduler**
     - **Internet Protocol Version 4 (TCP/IPv4)**
-
-    ![ألغ التحديد](/images/windows-config/network-03-uncheck-items.png)
   </Step>
   <Step title="حفظ التغييرات">
     اضغط **OK**.
-
-    ![حفظ](/images/windows-config/network-04-save.png)
   </Step>
 </Steps>
 
@@ -112,13 +108,18 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
 <Steps>
   <Step title="تنزيل DirectX">
     [https://www.microsoft.com/en-us/download/details.aspx?id=35](https://www.microsoft.com/en-us/download/details.aspx?id=35)
-
-    ![تنزيل DirectX](/images/windows-config/directx-01-download.png)
   </Step>
   <Step title="تشغيل المثبّت">
     شغّل الملف وأكمل التثبيت.
 
-    ![تشغيل DirectX](/images/windows-config/directx-02-install.png)
+    <Frame>
+      <img
+        src="/images/يهثقؤفء.png"
+        alt="يهثقؤفء"
+        title="يهثقؤفء"
+        style={{ width:"88%" }}
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -129,18 +130,21 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
 <Steps>
   <Step title="تنزيل All-in-One">
     [https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
-
-    ![تنزيل VC\+\+ AIO](/images/windows-config/vcpp-01-download.png)
   </Step>
   <Step title="فك الأرشيف">
     فك الأرشيف.
-
-    ![فك الأرشيف](/images/windows-config/vcpp-02-extract.png)
   </Step>
   <Step title="تشغيل install_all.bat كمسؤول">
     اضغط بزر الفأرة الأيمن على `install_all.bat` واختر **Run as administrator**.
 
-    ![تشغيل install\_all.bat](/images/windows-config/vcpp-03-install-bat.png)
+    <Frame>
+      <img
+        src="/images/run-all.png"
+        alt="Run All"
+        title="Run All"
+        style={{ width:"90%" }}
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -151,18 +155,21 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
 <Steps>
   <Step title="فتح إعدادات UAC">
     ابحث عن **UAC** في Start واختر **Change User Account Control settings**.
-
-    ![فتح UAC](/images/windows-config/uac-01-open.png)
   </Step>
   <Step title="اضبط على Never notify">
     اسحب المنزلق للأسفل إلى **Never notify**.
-
-    ![Never notify](/images/windows-config/uac-02-never-notify.png)
   </Step>
   <Step title="تأكيد التغيير">
     اضغط **OK**.
 
-    ![تأكيد](/images/windows-config/uac-03-confirm.png)
+    <Frame>
+      <img
+        src="/images/image.png"
+        alt="Image"
+        title="Image"
+        style={{ width:"84%" }}
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -190,22 +197,29 @@ description: "أكمل إعداد Windows بعد إعادة التثبيت قب�
   <Step title="فتح Windows Security">
     ابحث عن **Windows Security**.
 
-    ![Windows Security](/images/windows-config/coreiso-01-open-security.png)
+    <img
+      src="/images/ح-Windows-Security.png"
+      alt="ح Windows Security"
+      title="ح Windows Security"
+      style={{ width:"84%" }}
+    />
   </Step>
   <Step title="اذهب إلى Device Security">
     اضغط **Device Security**.
-
-    ![Device Security](/images/windows-config/coreiso-02-device-security.png)
   </Step>
   <Step title="فتح Core Isolation Details">
     اضغط **Core isolation details**.
-
-    ![Core isolation details](/images/windows-config/coreiso-03-details.png)
   </Step>
   <Step title="تفعيل Memory Integrity">
     فعّل **Memory Integrity**.
 
-    ![Memory Integrity On](/images/windows-config/coreiso-04-memory-integrity.png)
+    <Frame>
+      <img
+        src="/images/Toggle-Memory-Integrity-to-On.png"
+        alt="Toggle Memory Integrity To On"
+        title="Toggle Memory Integrity To On"
+      />
+    </Frame>
   </Step>
 </Steps>
 

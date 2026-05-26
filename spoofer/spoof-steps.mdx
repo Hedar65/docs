@@ -14,8 +14,6 @@ This page walks you through the complete HWID spoof process using the Mosab load
     Download [SerialChecker](https://drive.google.com/file/d/1T7S2xhexxFBLiQFy3WjLi3VbuZyKfaUu/view?usp=sharing) and run it.
 
     Note your current hardware serials and take a screenshot. Save the screenshot — you will use it later to confirm that the spoof changed your serials successfully.
-
-    ![SerialChecker showing current serials](/images/spoof-steps/01-serialchecker.png)
   </Step>
   <Step title="Clear TPM">
     Open the TPM management console and clear your TPM chip.
@@ -24,7 +22,18 @@ This page walks you through the complete HWID spoof process using the Mosab load
     2. Click **Clear TPM**.
     3. Click the **Restart** button and wait for your PC to restart fully.
 
-    ![Tpm Photo](/images/tpm-photo.jpeg)
+    <Steps>
+      <Step title="Open dashboard">
+        <Frame>
+          <img
+            src="/images/tpm-photo-1.jpeg"
+            alt="Tpm Photo 1"
+            className="rounded-xl"
+            title="Tpm Photo 1"
+          />
+        </Frame>
+      </Step>
+    </Steps>
 
     <Warning>
       Your PC will restart as part of this step. Save any open work before proceeding.
@@ -34,8 +43,6 @@ This page walks you through the complete HWID spoof process using the Mosab load
     After your PC restarts, download the loader from [loader.cryptauth.net](https://loader.cryptauth.net/) using your license key.
 
     Right-click the loader and select **Run as administrator**, then log in with your provided key.
-
-    ![Loader run as admin and login](/images/spoof-steps/03-loader-login.png)
   </Step>
   <Step title="Run the PERM Spoof Process">
     Inside the loader, complete the following actions in order:
@@ -43,32 +50,13 @@ This page walks you through the complete HWID spoof process using the Mosab load
     1. Log in with your license key.
     2. Type 5 "**MAC Spoof"** and run it.
 
-    ![MAC Spoof button](/images/spoof-steps/04-mac-spoof.png)
-
     3. Type 4 "**Driverless TPM Spoof"** and run it.
 
-    ![Driverless TPM Spoof button](/images/spoof-steps/05-tpm-spoof.png)
-
-    4. Check your new TPM serials using SerialChecker.
-
-    ![Verify TPM serials changed](/images/spoof-steps/06-verify-tpm.png)
-
-    <Warning>
-      If your TPM serials have **not** changed after running Driverless TPM Spoof, do not continue. Go back and follow the setup guide again, or open a support ticket.
-    </Warning>
-
-    5. Type 1 "**PERM Spoof"** and run it.
-
-    ![PERM Spoof button](/images/spoof-steps/07-perm-spoof.png)
-
-    6. Run SerialChecker again and verify that all serials have changed from your original screenshot.
-
-    ![Verify all serials changed](/images/spoof-steps/08-verify-all.png)
+    4. Type 1 "**PERM Spoof"** and run it.
+    5. Run SerialChecker again and verify that all serials have changed from your original screenshot.
   </Step>
   <Step title="Install Valorant">
     Install Valorant fresh after the spoof is complete.
-
-    ![Install Valorant](/images/spoof-steps/09-install-valorant.png)
 
     <Warning>
       When Windows Firewall asks for permission during installation, click **Cancel** or the **X** button. Do **not** click Allow. Granting firewall access can expose your hardware identity before the spoof is fully registered.
@@ -81,7 +69,9 @@ This page walks you through the complete HWID spoof process using the Mosab load
     - Disable **Hardware Acceleration**
     - Set **Close Window** to **Exit application**
 
-    ![Riot Client settings](/images/spoof-steps/10-riot-client-settings.png)
+    <Frame>
+      ![Riot](/images/riot.png)
+    </Frame>
 
     <Note>
       These settings prevent Riot Client from running in the background and reduce the risk of it collecting hardware data at the wrong time.
@@ -91,8 +81,6 @@ This page walks you through the complete HWID spoof process using the Mosab load
     Create a **new account** using an **Incognito** browser window — do not use your banned account.
 
     Play on the new account for **24 hours**. If you do not receive a VAL 5 error or a ban during that period, your spoof was successful and you can proceed safely.
-
-    ![Create new account in Incognito](/images/spoof-steps/11-new-account.png)
 
     <Tip>
       Always test on a fresh account first. Never log back into your previously banned account until you have confirmed the spoof is working.

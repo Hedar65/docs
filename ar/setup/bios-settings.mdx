@@ -1,9 +1,9 @@
 ---
 title: "إعدادات BIOS: TPM و Virtualization و Secure Boot"
-description: "فعّل TPM و Virtualization و Secure Boot في BIOS قبل استخدام Mosab Spoofer."
+description: "فعّل TPM و Virtualization و Secure Boot في BIOS قبل استخدام  Spoofer."
 ---
 
-قبل تشغيل Mosab Spoofer، تحتاج إلى تفعيل ثلاثة إعدادات داخل BIOS: TPM و Virtualization و Secure Boot. هذه مطلوبة للـ Spoofer ولألعاب مثل Valorant.
+قبل تشغيل  Spoofer، تحتاج إلى تفعيل ثلاثة إعدادات داخل BIOS: TPM و Virtualization و Secure Boot. هذه مطلوبة للـ Spoofer ولألعاب مثل Valorant.
 
 ---
 
@@ -68,18 +68,12 @@ TPM مطلوب لـ Windows 11 ولـ Vanguard. فعّله في BIOS باستخ�
 <Steps>
   <Step title="ادخل BIOS وحدّد إعدادات Secure Boot">
     أعد تشغيل جهازك واضغط المفتاح المناسب لدخول BIOS (عادةً **Del** أو **F2** أو **F10**).
-
-    ![دخول BIOS](/images/bios-settings/secureboot-01-enter-bios.png)
   </Step>
   <Step title="حذف جميع مفاتيح Secure Boot">
     انتقل إلى قسم Secure Boot واحذف جميع المفاتيح الموجودة.
-
-    ![حذف مفاتيح Secure Boot](/images/bios-settings/secureboot-02-delete-keys.png)
   </Step>
   <Step title="إعادة تحميل المفاتيح الافتراضية">
     بعد الحذف، اختر خيار إعادة تحميل أو استعادة المفاتيح الافتراضية. احفظ واخرج.
-
-    ![إعادة تحميل المفاتيح](/images/bios-settings/secureboot-03-reload-keys.png)
   </Step>
 </Steps>
 
@@ -108,12 +102,28 @@ TPM مطلوب لـ Windows 11 ولـ Vanguard. فعّله في BIOS باستخ�
   <Step title="فتح System Information">
     اضغط **Win \+ R**، اكتب `msinfo32`، واضغط **Enter**.
 
-    ![فتح msinfo32](/images/bios-settings/verify-secureboot-01-msinfo32.png)
+    <Frame>
+      <img
+        src="/images/msinfo-1.png"
+        alt="Msinfo 1"
+        className="rounded-xl"
+        title="Msinfo 1"
+        style={{ width:"99%" }}
+      />
+    </Frame>
   </Step>
   <Step title="تحقق من Secure Boot State">
     في System Summary، ابحث عن **Secure Boot State**. يجب أن تظهر **On**.
 
-    ![Secure Boot State On](/images/bios-settings/verify-secureboot-02-state-on.png)
+    <Frame>
+      <img
+        src="/images/secure-boot-1.png"
+        alt="Secure Boot 1"
+        className="rounded-xl"
+        title="Secure Boot 1"
+        style={{ width:"94%" }}
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -123,12 +133,27 @@ TPM مطلوب لـ Windows 11 ولـ Vanguard. فعّله في BIOS باستخ�
   <Step title="فتح TPM Management">
     اضغط **Win \+ R**، اكتب `tpm.msc`، واضغط **Enter**.
 
-    ![فتح tpm.msc](/images/bios-settings/verify-tpm-01-tpmmsc.png)
+    <Frame>
+      <img
+        src="/images/tpm.msc-1.png"
+        alt="Tpm Msc 1"
+        className="rounded-xl"
+        title="Tpm Msc 1"
+        style={{ width:"98%" }}
+      />
+    </Frame>
   </Step>
   <Step title="تأكيد حالة TPM">
     يجب أن تعرض حالة الحالة: **The TPM is ready for use.**
 
-    ![TPM ready for use](/images/bios-settings/verify-tpm-02-ready.png)
+    <Frame>
+      <img
+        src="/images/trusted-platform-module-management-on-local-computer-windows-10-1.png"
+        alt="Trusted Platform Module Management On Local Computer Windows 10 1"
+        title="Trusted Platform Module Management On Local Computer Windows 10 1"
+        style={{ width:"92%" }}
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -137,18 +162,16 @@ TPM مطلوب لـ Windows 11 ولـ Vanguard. فعّله في BIOS باستخ�
 <Steps>
   <Step title="فتح Task Manager">
     اضغط **Ctrl \+ Shift \+ Esc**.
-
-    ![فتح Task Manager](/images/bios-settings/verify-virt-01-taskmgr.png)
   </Step>
   <Step title="انتقل إلى Performance → CPU">
     اضغط على علامة **Performance**، ثم اختر **CPU**.
-
-    ![Performance CPU tab](/images/bios-settings/verify-virt-02-performance-cpu.png)
   </Step>
   <Step title="تأكيد تفعيل Virtualization">
     ابحث عن حقل **Virtualization** في الأسفل. يجب أن يظهر **Enabled**.
 
-    ![Virtualization Enabled](/images/bios-settings/verify-virt-03-enabled.png)
+    <Frame>
+      ![رهقعشم](/images/رهقعشم.avif)
+    </Frame>
   </Step>
 </Steps>
 

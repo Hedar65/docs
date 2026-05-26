@@ -1,18 +1,6 @@
 ---
-title: "كيف تعيد تثبيت Windows قبل استخدام Mosab Spoofer"
-description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosab Spoofer. يغطي طرق التثبيت العادي و RAID مع شرح diskpart عبر USB."
----
-
-قبل استخدام Mosab Spoofer، يجب عليك إجراء إعادة تثبيت نظيفة لـ **Windows 11 23H2**. هذا يضمن إعادة تعيين جميع معرّفات الهاردوير بشكل صحيح وعدم بقاء أي آثار حظر على نظامك. هناك طريقتان لإعادة التثبيت — العادية و RAID — والاختيار الصحيح يعتمد على لعبتك وتاريخ الحظر.
-
-## أي طريقة إعادة تثبيت يجب أن تستخدم؟
-
-| اللعبة | التوصية |
-| --- | --- |
-| **Fortnite** | استخدم التثبيت العادي. إذا تم حظرك أكثر من 3 مرات على نفس الجهاز، استخدم RAID. |
-| **Rust / Apex / ألعاب EAC/BE** | استخدم التثبيت العادي. |
-| **Valorant** | استخدم التثبيت العادي. إذا تم حظرك أكثر من مرتين على نفس الجهاز، استخدم RAID. |
-
+title: "كيف تعيد تثبيت Windows قبل استخدام Spoofer"
+description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Spoofer. يغطي طرق التثبيت العادي و  diskpart عبر USB."
 ---
 
 ## التثبيت العادي (USB — موصى به)
@@ -31,25 +19,28 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
 
 <Steps>
   <Step title="تنزيل ملف ISO لـ Windows 11 23H2">
-    اذهب إلى [microsoft.com](https://www.microsoft.com/software-download/windows11) وانزل إلى قسم **Download Windows 11 Disk Image (ISO) for x64 devices**.
 
-    اختر **Windows 11 (multi-edition ISO for x64 devices)**، حدد اللغة، ونزّل ملف ISO الخاص بـ **23H2**.
+    <Steps>
+      <Step title="Download ISO">
+        <a href="https://drive.google.com/file/d/1ErhUZn0Pgc7eNMWJQYRfegXl5Kqk68IZ/view" target="_blank">
+  23H2 ISO
+</a>
+      </Step>
+    </Steps>
 
     <Note>
       تأكد من تنزيل إصدار **23H2** تحديداً. لا تنزّل 24H2 أو إصدارات أقدم.
     </Note>
 
-    ![تنزيل Windows 11 23H2 ISO](/images/windows-reinstall/01-media-creation-tool.png)
+    ![Isonew](/images/isonew.PNG)
   </Step>
   <Step title="تنزيل Rufus لإنشاء USB">
     نزّل Rufus من [rufus.ie](https://rufus.ie/) — سيكتب ملف ISO على فلاش USB.
 
-    ![تنزيل Rufus](/images/windows-reinstall/01b-rufus-download.png)
+    ![Rufus](/images/rufus.png)
   </Step>
   <Step title="تشغيل Rufus كمسؤول">
     اضغط بزر الفأرة الأيمن على Rufus واختر **Run as administrator**.
-
-    ![تشغيل كمسؤول](/images/windows-reinstall/02-run-as-admin.png)
   </Step>
   <Step title="كتابة ISO 23H2 على USB">
     في Rufus:
@@ -63,19 +54,34 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
 
     انتظر حتى يظهر Rufus **READY** باللون الأخضر.
 
-    ![إنشاء وسائط تثبيت](/images/windows-reinstall/03-create-installation-media.png)
+    <img
+      src="/images/RUISO2.PNG"
+      alt="RUISO2"
+      title="RUISO2"
+      style={{ width:"57%" }}
+    />
   </Step>
   <Step title="الإقلاع من USB">
     اضغط مع الاستمرار على **SHIFT**، ثم اضغط **Restart** (استمر بالضغط حتى تظهر شاشة الاسترداد).
 
     في الشاشة الزرقاء، اختر **Use a device**، ثم اختر USB.
 
-    ![الإقلاع من USB](/images/windows-reinstall/04-boot-from-usb.png)
+    <img
+      src="/images/1234-1.png"
+      alt="1234 1"
+      title="1234 1"
+      style={{ width:"94%" }}
+    />
   </Step>
   <Step title="اختيار Windows 11 Pro">
     عندما يسألك معالج إعداد Windows عن أي نسخة تثبت، اختر **Windows 11 Pro**.
 
-    ![اختيار Windows 11 Pro](/images/windows-reinstall/05-select-win10-pro.png)
+    <img
+      src="/images/cant-select-windows-11-edition-during-clean-installation-thumbnail-1.png"
+      alt="Cant Select Windows 11 Edition During Clean Installation Thumbnail 1"
+      title="Cant Select Windows 11 Edition During Clean Installation Thumbnail 1"
+      style={{ width:"95%" }}
+    />
 
     <Warning>
       يجب اختيار **Windows 11 Pro** تحديداً. لا تختر Home أو أي نسخة أخرى.
@@ -84,12 +90,22 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
   <Step title="تخطي مفتاح المنتج">
     عندما يُطلب مفتاح المنتج، اضغط **I don't have a product key**.
 
-    ![تخطي مفتاح المنتج](/images/windows-reinstall/06-skip-product-key.png)
+    <img
+      src="/images/dad-1.png"
+      alt="Dad 1"
+      title="Dad 1"
+      style={{ width:"96%" }}
+    />
   </Step>
   <Step title="مسح كل قرص باستخدام diskpart">
     في شاشة التثبيت حيث تختار القرص، اضغط **SHIFT \+ F10** لفتح نافذة Command Prompt.
 
-    ![فتح diskpart CMD](/images/windows-reinstall/07-diskpart-cmd.png)
+    <img
+      src="/images/da-1.png"
+      alt="Da 1"
+      title="Da 1"
+      style={{ width:"97%" }}
+    />
 
     شغّل الأوامر التالية بالترتيب:
 
@@ -123,13 +139,16 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
   </Step>
   <Step title="اختر القرص الرئيسي وأكمل">
     بعد التحديث، اختر القرص الرئيسي الظاهر كـ **Unallocated Space**، ثم اضغط **Next**.
-
-    ![اختيار Unallocated space](/images/windows-reinstall/08-select-unallocated.png)
   </Step>
   <Step title="إنشاء حساب محلي بدون اتصال">
-    أثناء إعداد Windows، عند طلب تسجيل الدخول بحساب Microsoft، اختر إنشاء **Local (Offline) Account** بدلاً من ذلك.
+    أثناء تثبيت نظام التشغيل Windows، عندما يُطلب منك تسجيل الدخول باستخدام حساب Microsoft، اضغط على مفتاحي Shift \+ F10 واكتب START MS-CXH:LOCALONLY
 
-    ![حساب محلي](/images/windows-reinstall/09-local-account.png)
+    <img
+      src="/images/Start-ms-cxh-1.png"
+      alt="Start Ms Cxh 1"
+      title="Start Ms Cxh 1"
+      style={{ width:"98%" }}
+    />
 
     <Warning>
       لا تسجّل الدخول بحساب Microsoft القديم. أنشئ حساباً محلياً جديداً أو حساب Microsoft جديد تماماً.
@@ -138,7 +157,12 @@ description: "تثبيت نظيف لـ Windows مطلوب قبل تشغيل Mosa
   <Step title="تعطيل جميع إعدادات الخصوصية">
     عندما يسأل Windows عن إعدادات الخصوصية والتشخيص، أوقف **كل شيء**.
 
-    ![تعطيل الخصوصية](/images/windows-reinstall/10-disable-privacy.png)
+    <img
+      src="/images/windows-11-fresh-install-settings-1.avif"
+      alt="Windows 11 Fresh Install Settings 1"
+      title="Windows 11 Fresh Install Settings 1"
+      style={{ width:"97%" }}
+    />
   </Step>
   <Step title="نظافة الحساب بعد التثبيت">
     بعد اكتمال الإعداد، اتبع هذه القواعد:

@@ -1,5 +1,5 @@
 ---
-title: "كيف تكمل عملية الـ HWID Spoof مع Mosab"
+title: "كيف تكمل عملية الـ HWID Spoof مع "
 description: "اتبع عملية الـ spoof الكاملة: فحص السيريالات، مسح TPM، ثم تشغيل MAC Spoof و Driverless TPM Spoof و PERM Spoof."
 ---
 
@@ -22,7 +22,9 @@ description: "اتبع عملية الـ spoof الكاملة: فحص السير
     2. اضغط **Clear TPM**.
     3. اضغط **Restart** وانتظر الجهاز حتى يعيد التشغيل.
 
-    ![Tpm Photo](/images/tpm-photo.jpeg)
+    <Frame>
+      ![Tpm Photo](/images/tpm-photo.jpeg)
+    </Frame>
 
     <Warning>
       سيعيد جهازك التشغيل. احفظ أي عمل مفتوح.
@@ -37,34 +39,15 @@ description: "اتبع عملية الـ spoof الكاملة: فحص السير
     داخل الـ loader، أكمل هذه الإجراءات بالترتيب:
 
     1. سجّل الدخول بمفتاح الترخيص.
-    2. اضغط **MAC Spoof** وشغّله.
+    2. اكتب الرقم 5 "MAC Spoof" وقم بتشغيله
 
-    ![MAC Spoof](/images/spoof-steps/04-mac-spoof.png)
+    3. اكتب الرقم 4 "Driverless TPM Spoof" وقم بتشغيله
 
-    3. اضغط **Driverless TPM Spoof** وشغّله.
-
-    ![Driverless TPM Spoof](/images/spoof-steps/05-tpm-spoof.png)
-
-    4. تحقق من سيريالات TPM الجديدة بـ SerialChecker.
-
-    ![تحقق من TPM](/images/spoof-steps/06-verify-tpm.png)
-
-    <Warning>
-      إذا **لم** تتغير سيريالات TPM، لا تتابع. عد إلى دليل الإعداد أو افتح تذكرة دعم.
-    </Warning>
-
-    5. اضغط **PERM Spoof** وشغّله.
-
-    ![PERM Spoof](/images/spoof-steps/07-perm-spoof.png)
-
-    6. شغّل SerialChecker مرة أخرى وتحقق أن جميع السيريالات تغيّرت.
-
-    ![تحقق من الكل](/images/spoof-steps/08-verify-all.png)
+    4. اكتب الرقم 1 "PERM Spoof" وقم بتشغيله.
+    5. شغّل SerialChecker مرة أخرى وتحقق أن جميع السيريالات تغيّرت.
   </Step>
   <Step title="تثبيت Valorant">
     ثبّت Valorant بشكل جديد بعد اكتمال الـ spoof.
-
-    ![تثبيت Valorant](/images/spoof-steps/09-install-valorant.png)
 
     <Warning>
       عندما يطلب Windows Firewall إذناً أثناء التثبيت، اضغط **Cancel** أو **X**. **لا** تضغط Allow.
@@ -77,14 +60,14 @@ description: "اتبع عملية الـ spoof الكاملة: فحص السير
     - عطّل **Hardware Acceleration**
     - اضبط **Close Window** على **Exit application**
 
-    ![إعدادات Riot Client](/images/spoof-steps/10-riot-client-settings.png)
+    <Frame>
+      ![Riot](/images/riot.png)
+    </Frame>
   </Step>
   <Step title="اختبر بحساب جديد">
     أنشئ **حساباً جديداً** باستخدام نافذة **Incognito**.
 
     العب على الحساب الجديد لمدة **24 ساعة**.
-
-    ![حساب جديد](/images/spoof-steps/11-new-account.png)
   </Step>
 </Steps>
 

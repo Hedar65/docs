@@ -17,19 +17,25 @@ description: "اضبط محول الشبكة وغيّر IP بـ Cloudflare WARP 
 
     دوّن اسم اتصال الشبكة النشط.
 
-    ![ncpa.cpl](/images/network-setup/01-ncpa-active.png)
+    <Frame>
+      ![Net 1 1](/images/net-1-1.avif)
+    </Frame>
   </Step>
   <Step title="فتح Device Manager">
     اضغط بزر الفأرة الأيمن على **شعار Windows** واختر **Device Manager**.
 
-    ![Device Manager](/images/network-setup/02-device-manager.png)
+    <Frame>
+      ![Net1 1](/images/net-1.png)
+    </Frame>
   </Step>
   <Step title="تعطيل جميع محولات الشبكة غير النشطة">
     في Device Manager، وسّع **Network Adapters**.
 
     اضغط بزر الفأرة الأيمن على كل محول واختر **Disable device** — عطّل الجميع **عدا** النشط.
 
-    ![تعطيل المحولات](/images/network-setup/03-disable-adapters.png)
+    <Frame>
+      ![Net1 1](/images/net1-1.avif)
+    </Frame>
 
     <Warning>
       لا تعطل المحول النشط.
@@ -43,7 +49,9 @@ description: "اضبط محول الشبكة وغيّر IP بـ Cloudflare WARP 
   <Step title="فتح Network Connections مجدداً">
     اضغط **Windows \+ R**، اكتب `ncpa.cpl`، واضغط **OK**.
 
-    ![ncpa.cpl مجدداً](/images/network-setup/04-ncpa-again.png)
+    <Frame>
+      ![Net 1 1](/images/net-1-1.avif)
+    </Frame>
   </Step>
   <Step title="فتح Adapter Properties">
     اضغط بزر الفأرة الأيمن على الاتصال واختر **Properties**.
@@ -53,14 +61,18 @@ description: "اضبط محول الشبكة وغيّر IP بـ Cloudflare WARP 
     - **QoS Packet Scheduler**
     - **Internet Protocol Version 4 (TCP/IPv4)**
 
-    ![Adapter properties](/images/network-setup/05-adapter-properties.png)
+    <Frame>
+      ![Properties 1](/images/Properties-1.avif)
+    </Frame>
   </Step>
   <Step title="فتح Advanced Adapter Settings">
     اضغط بزر الفأرة الأيمن على الاتصال مجدداً، **Properties**، ثم **Configure**.
 
     اذهب إلى علامة **Advanced**.
 
-    ![Advanced tab](/images/network-setup/06-advanced-tab.png)
+    <Frame>
+      ![Net3 1](/images/net3-1.avif)
+    </Frame>
   </Step>
   <Step title="تطبيق الإعدادات المطلوبة">
     اضبط كل خاصية على القيمة الموضحة:
@@ -77,36 +89,6 @@ description: "اضبط محول الشبكة وغيّر IP بـ Cloudflare WARP 
     ```
 
     اضغط **OK**.
-
-    ![Advanced settings](/images/network-setup/07-advanced-settings.png)
-  </Step>
-</Steps>
-
-## تغيير عنوان IP
-
-<Steps>
-  <Step title="تحقق واحفظ IP الحالي">
-    زر أي موقع لفحص IP، دوّن IP الحالي وخذ لقطة شاشة.
-
-    ![فحص IP](/images/network-setup/08-check-ip.png)
-  </Step>
-  <Step title="افصل الاتصال لمدة 6 دقائق">
-    أوقف الانترنت تماماً لمدة **6 دقائق**، ثم أعد تشغيله.
-
-    تحقق من IP مجدداً. يجب أن يكون مختلفاً.
-
-    ![فصل الاتصال](/images/network-setup/09-disconnect.png)
-
-    <Warning>
-      إذا لم يتغير IP، اتصل بمزود خدمة الإنترنت أو جرّب فترة أطول.
-    </Warning>
-  </Step>
-  <Step title="إعداد Cloudflare WARP">
-    نزّل وثبّت [Cloudflare WARP](https://1.1.1.1/).
-
-    فعّل WARP واستخدمه في **كل مرة تشغّل فيها اللعبة** لمدة **7 أيام** بعد الـ spoof.
-
-    ![Cloudflare WARP](/images/network-setup/10-warp.png)
   </Step>
 </Steps>
 

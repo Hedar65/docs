@@ -1,9 +1,9 @@
 ---
-title: "Configure Windows After Reinstalling for Mosab Spoofer"
-description: "Complete the required post-reinstall Windows setup before running Mosab Spoofer: disable Defender, install runtimes, and configure networking."
+title: "Configure Windows After Reinstalling for  Spoofer"
+description: "Complete the required post-reinstall Windows setup before running Spoofer: disable Defender, install runtimes, and configure networking."
 ---
 
-After reinstalling Windows, you need to configure the system before running Mosab Spoofer. Work through each section below in order. Do not restart your computer until you have completed all steps — the final step will prompt you to restart.
+After reinstalling Windows, you need to configure the system before running Spoofer. Work through each section below in order. Do not restart your computer until you have completed all steps — the final step will prompt you to restart.
 
 ---
 
@@ -17,12 +17,22 @@ The spoofer requires Windows Defender's real-time protection to be turned off be
       <Step title="Open Windows Security">
         Press the **Windows key** and search for **Windows Security**, then open the app.
 
-        ![Open Windows Security](/images/windows-config/defender-01-open-security.png)
+        <img
+          src="/images/ح-Windows-Security.png"
+          alt="ح Windows Security"
+          title="ح Windows Security"
+          style={{ width:"86%" }}
+        />
       </Step>
       <Step title="Disable Real-time protection">
         Go to **Virus & threat protection** → **Manage settings**, then toggle **Real-time protection** to **Off**.
 
-        ![Disable real-time protection](/images/windows-config/defender-02-realtime-off.png)
+        <img
+          src="/images/v4-460px-Disable-Virus-Protection-on-Your-Computer-Step-6.jpg"
+          alt="V4 460px Disable Virus Protection On Your Computer Step 6"
+          title="V4 460px Disable Virus Protection On Your Computer Step 6"
+          style={{ width:"86%" }}
+        />
       </Step>
     </Steps>
   </Tab>
@@ -32,8 +42,6 @@ The spoofer requires Windows Defender's real-time protection to be turned off be
         Download the tool from:
 
         [https://www.sordum.org/files/downloads.php?st-defender-control](https://www.sordum.org/files/downloads.php?st-defender-control)
-
-        ![Download Defender Control](/images/windows-config/dcontrol-01-download.png)
       </Step>
       <Step title="Extract the archive">
         Extract the downloaded ZIP file. The archive password is:
@@ -41,18 +49,16 @@ The spoofer requires Windows Defender's real-time protection to be turned off be
         ```text
         sordum
         ```
-
-        ![Extract archive](/images/windows-config/dcontrol-02-extract.png)
       </Step>
       <Step title="Run dControl.exe">
         Open the extracted folder and run `dControl.exe`.
-
-        ![Run dControl.exe](/images/windows-config/dcontrol-03-run.png)
       </Step>
       <Step title="Disable Windows Defender">
         Click **Disable Windows Defender** in the tool's interface.
 
-        ![Disable Defender](/images/windows-config/dcontrol-04-disable.png)
+        <Frame>
+          ![M14](/images/m14.png)
+        </Frame>
       </Step>
     </Steps>
   </Tab>
@@ -67,13 +73,16 @@ Reduce unnecessary background activity that could interfere with the spoofer.
 <Steps>
   <Step title="Disable background apps">
     Go to **Settings → Privacy → Background apps** and turn off background app activity.
-
-    ![Disable background apps](/images/windows-config/startup-01-background-apps.png)
   </Step>
   <Step title="Disable startup programs">
     Open **Task Manager** (Ctrl \+ Shift \+ Esc), click the **Startup** tab, and disable every entry in the list.
 
-    ![Disable startup programs](/images/windows-config/startup-02-task-manager.png)
+    <img
+      src="/images/select-an-app-that-has-the-enabled-status-then-click-the-disable-button-towards-the-upper-right-corner-of-the-window.avif"
+      alt="Select An App That Has The Enabled Status Then Click The Disable Button Towards The Upper Right Corner Of The Window"
+      title="Select An App That Has The Enabled Status Then Click The Disable Button Towards The Upper Right Corner Of The Window"
+      style={{ width:"98%" }}
+    />
   </Step>
 </Steps>
 
@@ -90,26 +99,18 @@ Strip unnecessary protocols from your network connection to reduce potential ide
 <Steps>
   <Step title="Open Network Connections">
     Press **Win \+ R**, type `ncpa.cpl`, and press **Enter**.
-
-    ![Open ncpa.cpl](/images/windows-config/network-01-ncpa.png)
   </Step>
   <Step title="Open adapter properties">
     Right-click your active internet connection (Ethernet or Wi-Fi) and select **Properties**.
-
-    ![Adapter properties](/images/windows-config/network-02-properties.png)
   </Step>
   <Step title="Uncheck all items except two">
     In the properties list, uncheck everything **except** the following two items:
 
     - **QoS Packet Scheduler**
     - **Internet Protocol Version 4 (TCP/IPv4)**
-
-    ![Uncheck adapter items](/images/windows-config/network-03-uncheck-items.png)
   </Step>
   <Step title="Save changes">
     Click **OK** to apply.
-
-    ![Save changes](/images/windows-config/network-04-save.png)
   </Step>
 </Steps>
 
@@ -124,13 +125,18 @@ DirectX runtimes are required for the spoofer and many games to run correctly. I
     Download the installer from Microsoft:
 
     [https://www.microsoft.com/en-us/download/details.aspx?id=35](https://www.microsoft.com/en-us/download/details.aspx?id=35)
-
-    ![Download DirectX](/images/windows-config/directx-01-download.png)
   </Step>
   <Step title="Run the installer">
     Launch the downloaded file and follow the on-screen instructions until installation completes.
 
-    ![Run DirectX installer](/images/windows-config/directx-02-install.png)
+    <Frame>
+      <img
+        src="/images/يهثقؤفء.png"
+        alt="يهثقؤفء"
+        title="يهثقؤفء"
+        style={{ width:"85%" }}
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -145,18 +151,19 @@ The Visual C\+\+ Redistributable packages provide runtime libraries that Mosab S
     Download from TechPowerUp:
 
     [https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
-
-    ![Download VC\+\+ AIO](/images/windows-config/vcpp-01-download.png)
   </Step>
   <Step title="Extract the archive">
     Unzip the downloaded file to a folder.
-
-    ![Extract VC\+\+ archive](/images/windows-config/vcpp-02-extract.png)
   </Step>
   <Step title="Run install_all.bat as administrator">
     Inside the extracted folder, right-click `install_all.bat` and select **Run as administrator**.
 
-    ![Run install\_all.bat](/images/windows-config/vcpp-03-install-bat.png)
+    <img
+      src="/images/run-all.png"
+      alt="Run All"
+      title="Run All"
+      style={{ width:"97%" }}
+    />
   </Step>
 </Steps>
 
@@ -169,18 +176,19 @@ User Account Control (UAC) prompts can interfere with the spoofer's ability to m
 <Steps>
   <Step title="Open UAC settings">
     Open the **Start** menu and search for **UAC**. Select **Change User Account Control settings**.
-
-    ![Open UAC settings](/images/windows-config/uac-01-open.png)
   </Step>
   <Step title="Set to Never notify">
     Drag the slider all the way down to **Never notify**.
-
-    ![UAC Never notify](/images/windows-config/uac-02-never-notify.png)
   </Step>
   <Step title="Confirm the change">
     Click **OK** and accept any confirmation prompt that appears.
 
-    ![Confirm UAC change](/images/windows-config/uac-03-confirm.png)
+    <img
+      src="/images/image.png"
+      alt="Capture 2026 05 26 0506"
+      title="Capture 2026 05 26 0506"
+      style={{ width:"88%" }}
+    />
   </Step>
 </Steps>
 
@@ -220,22 +228,29 @@ Memory Integrity is a Windows security feature that Mosab Spoofer requires to be
   <Step title="Open Windows Security">
     Open the **Start** menu, search for **Windows Security**, and open the app.
 
-    ![Open Windows Security](/images/windows-config/coreiso-01-open-security.png)
+    <img
+      src="/images/ح-Windows-Security.png"
+      alt="ح Windows Security"
+      title="ح Windows Security"
+      style={{ width:"89%" }}
+    />
   </Step>
   <Step title="Go to Device Security">
     Click **Device Security** in the left panel.
-
-    ![Device Security](/images/windows-config/coreiso-02-device-security.png)
   </Step>
   <Step title="Open Core Isolation Details">
     Under the **Core isolation** section, click **Core isolation details**.
-
-    ![Core isolation details](/images/windows-config/coreiso-03-details.png)
   </Step>
   <Step title="Enable Memory Integrity">
     Toggle **Memory Integrity** to **On**.
 
-    ![Memory Integrity On](/images/windows-config/coreiso-04-memory-integrity.png)
+    <Frame>
+      <img
+        src="/images/Toggle-Memory-Integrity-to-On.png"
+        alt="Toggle Memory Integrity To On"
+        title="Toggle Memory Integrity To On"
+      />
+    </Frame>
   </Step>
 </Steps>
 
@@ -247,4 +262,4 @@ Memory Integrity is a Windows security feature that Mosab Spoofer requires to be
 
 ## Final Step: Restart Your Computer
 
-Once you have completed all steps above, restart your machine. Your system is now configured and ready for Mosab Spoofer.
+Once you have completed all steps above, restart your machine. Your system is now configured and ready for Spoofer.

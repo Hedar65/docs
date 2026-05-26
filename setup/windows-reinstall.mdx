@@ -1,5 +1,5 @@
 ---
-title: "How to Reinstall Windows Before Using Mosab Spoofer"
+title: "How to Reinstall Windows Before Using  Spoofer"
 ---
 
 ## Normal Reinstall (USB — Recommended)
@@ -18,15 +18,19 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 
 <Steps>
   <Step title="Download the Windows 11 23H2 ISO">
-    Go to [microsoft.com](https://drive.google.com/file/d/1ErhUZn0Pgc7eNMWJQYRfegXl5Kqk68IZ/view?userstoinvite=mlb12345qw@gmail.com&sharingaction=manageaccess&role=reader&ts=6a132ba8)3d and scroll to **Download Windows 11 Disk Image (ISO) for x64 devices**.
-
-    Select **Windows 11 (multi-edition ISO for x64 devices)**, choose your language, and download the **23H2** ISO file.
+    <Steps>
+      <Step title="Download ISO" stepNumber={0}>
+        <a href="https://drive.google.com/file/d/1ErhUZn0Pgc7eNMWJQYRfegXl5Kqk68IZ/view" target="_blank">
+  23H2 ISO
+</a>
+      </Step>
+    </Steps>
 
     <Note>
-      Make sure you download the **23H2** build specifically. Do not download 24H2 or older versions.
+      **23H2** build specifically. Do not download 24H2 or older versions.
     </Note>
 
-    ![Download Windows 11 23H2 ISO](/images/windows-reinstall/01-media-creation-tool.png)
+    ![Isonew](/images/isonew.PNG)
   </Step>
   <Step title="Download Rufus to create the USB">
     Download Rufus from [rufus.ie](https://rufus.ie/) — it will write the ISO to your USB drive.
@@ -35,8 +39,6 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
   </Step>
   <Step title="Run Rufus as administrator">
     Right-click Rufus and select **Run as administrator**.
-
-    ![Run Rufus as administrator](/images/windows-reinstall/02-run-as-admin.png)
   </Step>
   <Step title="Write the 23H2 ISO to your USB">
     In Rufus:
@@ -50,7 +52,12 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
 
     Wait until Rufus shows **READY** in green.
 
-    ![Create installation media with Rufus](/images/windows-reinstall/03-create-installation-media.png)
+    <img
+      src="/images/RUISO2.PNG"
+      alt="RUISO2"
+      title="RUISO2"
+      style={{ width:"61%" }}
+    />
   </Step>
   <Step title="Boot from the USB">
     Hold **SHIFT**, then click **Restart** (keep holding SHIFT until the recovery screen appears).
@@ -61,12 +68,18 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
       src="/images/1234.png"
       alt="Imag323es"
       title="Imag323es"
+      style={{ width:"99%" }}
     />
   </Step>
   <Step title="Select Windows 11 Pro">
     When the Windows Setup wizard asks which version to install, select **Windows 11 Pro**.
 
-    ![Cant Select Windows 11 Edition During Clean Installation Thumbnail](/images/cant-select-windows-11-edition-during-clean-installation-thumbnail.png)
+    <img
+      src="/images/cant-select-windows-11-edition-during-clean-installation-thumbnail.png"
+      alt="Cant Select Windows 11 Edition During Clean Installation Thumbnail"
+      title="Cant Select Windows 11 Edition During Clean Installation Thumbnail"
+      style={{ width:"99%" }}
+    />
 
     <Warning>
       You must select **Windows 11 Pro** specifically. Do not choose Home or any other edition.
@@ -126,8 +139,6 @@ Reinstalling Windows via USB is strongly recommended because it lets you wipe ev
   </Step>
   <Step title="Select the main disk and continue">
     After refreshing, select your main disk shown as **Unallocated Space**, then click **Next**. The installation will begin.
-
-    ![Select unallocated space](/images/windows-reinstall/08-select-unallocated.png)
   </Step>
   <Step title="Create a local offline account">
     During Windows setup, when asked to sign in with a Microsoft account, Press shift \+ f10 type START MS-CXH:LOCALONLY 
