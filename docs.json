@@ -48,8 +48,7 @@
                 "group": "Troubleshooting",
                 "pages": [
                   "troubleshooting/common-issues",
-                  "troubleshooting/tpm-not-found",
-                  "troubleshooting/spoofer-not-opening"
+                  "troubleshooting/tpm-not-found"
                 ]
               }
             ]
@@ -90,8 +89,7 @@
                 "group": "حل المشاكل",
                 "pages": [
                   "ar/troubleshooting/common-issues",
-                  "ar/troubleshooting/tpm-not-found",
-                  "ar/troubleshooting/spoofer-not-opening"
+                  "ar/troubleshooting/tpm-not-found"
                 ]
               }
             ]
