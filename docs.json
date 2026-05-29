@@ -83,7 +83,8 @@
                   "ar/spoofer/download",
                   "ar/spoofer/spoof-steps",
                   "ar/spoofer/network-setup",
-                  "ar/spoofer/monitor-serials"
+                  "ar/spoofer/monitor-serials",
+                  "spoofer/Important"
                 ]
               },
               {
