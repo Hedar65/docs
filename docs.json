@@ -41,7 +41,8 @@
                   "spoofer/download",
                   "spoofer/spoof-steps",
                   "spoofer/network-setup",
-                  "spoofer/monitor-serials"
+                  "spoofer/monitor-serials",
+                  "spoofer/Important"
                 ]
               },
               {
@@ -104,5 +105,8 @@
     ],
     "display": "header"
   },
-  "logo": "/images/Gemini_Generated_Image_r3ht4jr3ht4jr3ht.png"
+  "logo": "/images/Gemini_Generated_Image_r3ht4jr3ht4jr3ht.png",
+  "search": {
+    "prompt": "i"
+  }
 }
