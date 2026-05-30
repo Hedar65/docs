@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "sequoia",
+  "theme": "almond",
   "name": "Mosab Store",
   "favicon": "https://icons.duckduckgo.com/ip3/redline-1.gitbook.io.ico",
   "colors": {
